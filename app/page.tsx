@@ -45,7 +45,7 @@ export default function Home() {
     <main>
       {snowflakes && (
         <Snowfall
-          snowflakeCount={80}
+          snowflakeCount={60}
           speed={[1, 1.5]}
           wind={[1, 1]}
           images={snowflakes}
@@ -55,7 +55,7 @@ export default function Home() {
             position: "absolute",
             width: "100%",
             height: "100%",
-            zIndex: 1000,
+            zIndex: 1,
           }}
         />
       )}
