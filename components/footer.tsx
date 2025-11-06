@@ -32,7 +32,7 @@ const Footer = () => {
                         <Link href="https://x.com/gdsciiitkalyani" target="_blank" rel="noopener noreferrer" className="w-[22%]">
                             <Image className="bg-gradient-radial from-white via-white via-60% to-transparent to-60% hover:scale-110 duration-700" src={twitter} alt="twitter" />
                         </Link>
-                        <Link href="https://discord.gg/tcaxPN6CNs" target="_blank" rel="noopener noreferrer" className="w-[22%]">
+                        <Link href="https://discord.gg/MAN8pUcd" target="_blank" rel="noopener noreferrer" className="w-[22%]">
                             <Image className="p-[7.5%] hover:scale-110 duration-700" src={discord} alt="discord" />
                         </Link>
                         <Link href="https://www.linkedin.com/company/gdsc-iiit-kalyani" target="_blank" rel="noopener noreferrer" className="w-[19%] relative">

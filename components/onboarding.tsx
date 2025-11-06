@@ -18,7 +18,7 @@ const Register = () => {
                 rel="noopener noreferrer" target="_blank" className="absolute w-[80%] sm:w-[50vh] top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20 hover:scale-110 duration-700" >
                     <Image src={logo} alt="register" className="w-full"/>
                 </Link>
-                <Link href="https://discord.gg/ePBMbdKdKG" rel="noopener noreferrer" target="_blank" className="z-20 w-[15vmax] h-fit mr-[-10vmax] hover:mr-0 duration-700" >
+                <Link href="https://discord.gg/MAN8pUcd" rel="noopener noreferrer" target="_blank" className="z-20 w-[15vmax] h-fit mr-[-10vmax] hover:mr-0 duration-700" >
                     <Image src={discord} alt="discord" />
                 </Link>
             </div>
