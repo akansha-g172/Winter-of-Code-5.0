@@ -19,6 +19,7 @@ export default function Home() {
 
   useEffect(() => {
     // This runs only in the browser
+    
     const snowflakeImages = () => {
       const canvas = document.createElement("canvas");
       const ctx = canvas.getContext("2d");
