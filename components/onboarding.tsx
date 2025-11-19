@@ -11,16 +11,16 @@ import { useEffect, useState } from "react";
 const Register = () => {
     var TBA = false;
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://apply.devfolio.co/v2/sdk.js';
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-        return () => {
-          document.body.removeChild(script);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const script = document.createElement('script');
+    //     script.src = 'https://apply.devfolio.co/v2/sdk.js';
+    //     script.async = true;
+    //     script.defer = true;
+    //     document.body.appendChild(script);
+    //     return () => {
+    //       document.body.removeChild(script);
+    //     }
+    // }, []);
     
     return (
         <section className="bg-black w-full relative h-[90vh] sm:h-[100vh] flex flex-col pb-[10%] sm:pb-0 justify-evenly overflow-hidden" id="onboarding">
@@ -49,12 +49,11 @@ const Register = () => {
                     </Link>}
                 </div>
                 <hr className="w-full h-[0.25vw] bg-gradient-to-r from-brand"/>
-                <div 
+                {/* <div 
 	                className="apply-button" 
 	                data-hackathon-slug="winter-of-code-5" 
 	                data-button-theme="light"
-	                // style="height: 44px; width: 312px"
-                ></div>
+                ></div> */}
             </div>
             <hr className="absolute bottom-0 flex w-full bg-gradient-to-r from-black via-[#CCCCCC50] z-20"/>
         </section>
