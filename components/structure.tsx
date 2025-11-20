@@ -85,24 +85,20 @@ export default function Structure({
       setFontSizeForTextScaleElements();
     }, 300);
 
-    const interval = setInterval(() => {
-      setFontSizeForTextScaleElements();
-      console.log('interval');
-    }, 300);
-
     return () => {
-      document.body.removeChild(script);
+      if (script.parentNode) {
+        document.body.removeChild(script);
+      }
       window.removeEventListener('resize', setFontSizeForTextScaleElements);
       window.removeEventListener('click', setFontSizeForTextScaleElements);
-      window.removeEventListener('load', onLoadHandler);  
+      window.removeEventListener('load', onLoadHandler);
       clearTimeout(timeout);
-      clearInterval(interval);
     };
 
   }, []);
 
   return (
-    <body className={`${kleemax.variable} ${chakra.variable} bg-black`} onLoad={textScale}>
+    <body className={`${kleemax.variable} ${chakra.variable} bg-black`}>
       <Navbar />
       {children}
       <Footer />
