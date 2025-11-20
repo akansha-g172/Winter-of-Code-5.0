@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 var textDisplay="";
 const JumbleText = ({ text,id }: { text: string ,id:string}) => {

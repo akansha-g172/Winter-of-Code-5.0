@@ -3,6 +3,8 @@ import { Inter, Chakra_Petch } from "next/font/google";
 import localfont from "next/font/local";
 import Structure from "@/components/structure";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Script from "next/script";
+import ClientErrorLogger from "@/components/ClientErrorLogger";
  
 export const metadata: Metadata = {
   title: 'Winter of Code 5.0',
@@ -40,8 +42,11 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${kleemax.variable} ${chakra.variable} bg-black`}>
-        <Structure children={children}/>
-        <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+        <ClientErrorLogger />
+        {/* <Structure children={children}/> */}
+        <Structure>{children}</Structure>
+        {/* <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script> */}
+        <Script src="https://apply.devfolio.co/v2/sdk.js" strategy="afterInteractive" />
         <SpeedInsights />
       </body>
     </html>
