@@ -98,7 +98,7 @@ const PastOrgCard = ({ org }: { org: PastOrg }) => {
             rel="noopener noreferrer"
             target="_blank"
         >
-            <Image className="backdrop-blur" src={partnercard} alt="org card" />
+            <Image className="backdrop-blur" src={partnercard} alt="" />
             <div className='absolute top-[4%] left-[10%] w-[80%] font-chakra font-bold text-scale-40-4 text-center text-orgs text-nowrap overflow-hidden'>
                 {org.name}
             </div>
