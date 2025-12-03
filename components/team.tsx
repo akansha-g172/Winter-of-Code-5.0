@@ -27,10 +27,6 @@ const teamData: Teammate[] = [
     bio: "https://www.linkedin.com/in/harshraj112/",
   },
   {
-    name: "Satya Yadav",
-    bio: "https://www.linkedin.com/in/satya-yadav-22798b323/",
-  },
-  {
     name: "Harsh Dev Jha",
     bio: "https://www.linkedin.com/in/harsh-dev-jha/",
   },
