@@ -63,6 +63,10 @@ const partnerData: Partner[] = [
         name: "MCKV GDG",
         link: "https://www.linkedin.com/company/gdg-on-campus-mckv-institute-of-engineering-howrah-india"
     },
+    {
+        name: "Open Source Chandigarh",
+        link: "https://www.linkedin.com/company/open-source-chandigarh"
+    },
 ];
 
 const PartnerCard = ({ partner }: { partner: Partner }) => {

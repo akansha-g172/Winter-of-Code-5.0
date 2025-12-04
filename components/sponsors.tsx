@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const SponsorData: string[][] = [
-    ["Devfolio"], // Platinum
+    ["Devfolio", "Fueler"], // Platinum
     ["ETHIndia", "interviewBuddy"], // Gold
     ["aops"], // Silver
     []  // Bronze
@@ -19,6 +19,7 @@ const Sponsors = () => {
         indeed: 'Indeed.png',
         interviewbuddy: 'interviewBuddy.png',
         aops: 'aops.png',
+        fueler: 'fueler.png',
     };
     return (
         <section className='w-full h-full mx-auto pt-[10%]' id="sponsors">
@@ -53,7 +54,7 @@ const Sponsors = () => {
                                     {tierData.map((sponsor, idx) => (
                                         <Image
                                             key={idx}
-                                            className="backdrop-blur sm:w-[20%] h-auto w-[30%] hover:scale-105 duration-700"
+                                            className={`backdrop-blur h-auto hover:scale-105 duration-700 ${sponsor.toLowerCase() === 'fueler' ? 'sm:w-[30%] w-[50%]' : 'sm:w-[20%] w-[30%]'}`}
                                             src={`/sponsors/${sponsorFileMap[sponsor.toLowerCase()] ?? `${sponsor.toLowerCase()}.png`}`}
                                             width={600}
                                             height={200}
