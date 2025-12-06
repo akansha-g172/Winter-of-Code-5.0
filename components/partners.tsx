@@ -8,60 +8,16 @@ interface Partner {
 
 const partnerData: Partner[] = [
     {
-        name: "GDG On Campus IEM",
-        link: "https://www.linkedin.com/company/gdsciem"
-    },
-    {
-        name: "Magistics",
-        link: "https://www.linkedin.com/company/magistics/"
-    },
-    {
-        name: "Google Developer Group Vidyalankar Institute of Technology",
-        link: "https://www.linkedin.com/company/google-developer-groups-vit-mumbai"
-    },
-    {
-        name: "GDG on Campus BCREC",
-        link: "https://www.linkedin.com/company/gdsc-bcrec"
-    },
-    {
-        name: "Sourcify IN",
-        link: "https://www.linkedin.com/company/sourcifyin/"
-    },
-    {
-        name: "GDG on Campus GCECT",
-        link: "https://www.linkedin.com/company/google-developer-groups-on-campus-gcect"
-    },
-    {
-        name: "ByteBrigade",
-        link: "https://www.linkedin.com/company/byte-brigade2025/"
-    },
-    {
-        name: "GDG AOT",
-        link: "https://www.linkedin.com/company/gdgocaot/"
-    },
-    {
-        name: "GDG JIS",
-        link: "https://www.linkedin.com/company/dscjisu/"
-    },
-    {
-        name: "AITD-EVENTS",
-        link: "https://www.linkedin.com/in/aitd-events/"
+        name: "IIItians Network",
+        link: "https://www.linkedin.com/company/iiitians-network/"
     },
     {
         name: "Apertre",
         link: "https://www.linkedin.com/showcase/apertre25/"
     },
     {
-        name: "rootsprout",
-        link: "https://www.linkedin.com/company/rootsprout/"
-    },
-    {
         name: "DevDotCom",
         link: "https://www.linkedin.com/company/devdotcom/"
-    },
-    {
-        name: "MCKV GDG",
-        link: "https://www.linkedin.com/company/gdg-on-campus-mckv-institute-of-engineering-howrah-india"
     },
     {
         name: "Open Source Chandigarh",
@@ -76,8 +32,52 @@ const partnerData: Partner[] = [
         link: "https://www.linkedin.com/company/scrollconnect"
     },
     {
-        name: "Iiitians Network",
-        link: "https://www.linkedin.com/company/iiitians-network/"
+        name: "AITD-EVENTS",
+        link: "https://www.linkedin.com/in/aitd-events/"
+    },
+    {
+        name: "Sourcify IN",
+        link: "https://www.linkedin.com/company/sourcifyin/"
+    },
+    {
+        name: "Magistics",
+        link: "https://www.linkedin.com/company/magistics/"
+    },
+    {
+        name: "ByteBrigade",
+        link: "https://www.linkedin.com/company/byte-brigade2025/"
+    },
+    {
+        name: "rootsprout",
+        link: "https://www.linkedin.com/company/rootsprout/"
+    },
+    {
+        name: "GDG on Campus IEM",
+        link: "https://www.linkedin.com/company/gdsciem"
+    },
+    {
+        name: "GDG on Campus VIT",
+        link: "https://www.linkedin.com/company/google-developer-groups-vit-mumbai"
+    },
+    {
+        name: "GDG on Campus BCREC",
+        link: "https://www.linkedin.com/company/gdsc-bcrec"
+    },
+    {
+        name: "GDG on Campus GCECT",
+        link: "https://www.linkedin.com/company/google-developer-groups-on-campus-gcect"
+    },
+    {
+        name: "GDG on Campus AOT",
+        link: "https://www.linkedin.com/company/gdgocaot/"
+    },
+    {
+        name: "GDG on Campus JIS",
+        link: "https://www.linkedin.com/company/dscjisu/"
+    },
+    {
+        name: "GDG on Campus MCKV",
+        link: "https://www.linkedin.com/company/gdg-on-campus-mckv-institute-of-engineering-howrah-india"
     },
 ];
 
