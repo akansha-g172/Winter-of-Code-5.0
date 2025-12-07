@@ -8,7 +8,7 @@ interface Partner {
 
 const partnerData: Partner[] = [
     {
-        name: "IIItians Network",
+        name: "IIITians Network",
         link: "https://www.linkedin.com/company/iiitians-network/"
     },
     {
