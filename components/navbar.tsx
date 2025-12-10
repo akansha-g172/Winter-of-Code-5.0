@@ -118,17 +118,19 @@ const Navbar = () => {
                     WOC
                 </Link>
 
-                {/* Hamburger Icon - Mobile Only */}
-                <button
-                    onClick={toggleMenu}
-                    className={`sm:hidden z-[2100] w-[44px] h-[44px] flex flex-col justify-center items-center gap-[7px] cursor-pointer group rounded-lg hover:bg-neon/10 transition-all duration-300 ${isOpen ? 'fixed top-[18px] right-5' : 'absolute top-1/2 -translate-y-1/2 right-5'} ${isOpen && !isClosing ? 'hamburger-open' : ''}`}
-                    aria-label="Toggle menu"
-                    aria-expanded={isOpen}
-                >
-                    <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
-                    <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
-                    <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
-                </button>
+                {/* Hamburger Icon - Mobile Only (hidden when menu is open) */}
+                {!isOpen && (
+                    <button
+                        onClick={toggleMenu}
+                        className="sm:hidden z-[2100] w-[44px] h-[44px] flex flex-col justify-center items-center gap-[7px] cursor-pointer group rounded-lg hover:bg-neon/10 transition-all duration-300 absolute top-1/2 -translate-y-1/2 right-5"
+                        aria-label="Open menu"
+                        aria-expanded={isOpen}
+                    >
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
+                    </button>
+                )}
 
                 {/* Desktop Navigation - Left */}
                 <div className="flex-col hidden sm:flex-row w-full items-end sm:items-center justify-start px-[2%] gap-[2%] sm:flex">
@@ -154,28 +156,49 @@ const Navbar = () => {
             {/* Navline decoration */}
             <Image className="flex sm:0 mt-[-1px]" src={navline} alt="navline" />
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Menu Full-Screen Overlay */}
             {isOpen && (
                 <>
-                    {/* Backdrop with blur */}
+                    {/* Semi-transparent backdrop - covers entire screen */}
                     <div
-                        className={`sm:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[2050] ${isClosing ? 'backdrop-exit' : 'backdrop-enter'}`}
+                        className={`sm:hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-[9998] ${isClosing ? 'backdrop-exit' : 'backdrop-enter'}`}
                         onClick={closeMenu}
                         aria-hidden="true"
                     />
 
-                    {/* Menu Panel */}
+                    {/* Full-Screen Menu Panel */}
                     <div
                         ref={menuRef}
-                        className={`sm:hidden fixed top-0 right-0 h-full w-[75%] max-w-[300px] bg-black/95 z-[2060] flex flex-col scan-lines ${isClosing ? 'menu-panel-exit' : 'menu-panel-enter'}`}
+                        className={`sm:hidden fixed inset-0 bg-black z-[9999] flex flex-col scan-lines ${isClosing ? 'menu-panel-exit' : 'menu-panel-enter'}`}
                         role="dialog"
                         aria-modal="true"
                         aria-label="Mobile navigation menu"
                     >
-                        {/* Menu Items - starts at ~120px from top */}
-                        <div className="flex flex-col px-4 pt-[120px] gap-1">
+                        {/* Close Button (X) - Top Right */}
+                        <button
+                            onClick={closeMenu}
+                            className="absolute top-5 right-5 z-[10000] w-[44px] h-[44px] flex items-center justify-center cursor-pointer rounded-full border-2 border-neon/50 hover:border-neon hover:bg-neon/10 transition-all duration-300 group close-button-glow"
+                            aria-label="Close menu"
+                        >
+                            <svg
+                                className="w-6 h-6 text-neon group-hover:drop-shadow-neon transition-all duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2.5}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+
+                        {/* Menu Items - centered vertically */}
+                        <div className="flex flex-col justify-center items-center h-full px-8 gap-2">
                             {menuItems.map((item, index) => (
-                                <div key={item.name}>
+                                <div key={item.name} className="w-full max-w-[280px]">
                                     <Link
                                         href={item.href}
                                         onClick={(e) => {
@@ -183,12 +206,12 @@ const Navbar = () => {
                                             createRipple(e);
                                             handleMenuItemClick(e, item.href);
                                         }}
-                                        className="menu-item menu-item-glow ripple-container block py-3 px-4 font-chakra font-bold text-white text-lg tracking-wide transition-all duration-300 active:scale-[1.02]"
+                                        className="menu-item menu-item-glow ripple-container block py-4 px-6 font-chakra font-bold text-white text-xl tracking-wide transition-all duration-300 active:scale-[1.02] text-center"
                                     >
                                         {item.name.toUpperCase()}
                                     </Link>
                                     {index < menuItems.length - 1 && (
-                                        <div className="gradient-divider mx-2" />
+                                        <div className="gradient-divider mx-4" />
                                     )}
                                 </div>
                             ))}
