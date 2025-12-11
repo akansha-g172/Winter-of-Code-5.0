@@ -30,539 +30,204 @@ interface Project {
 
 const projectData: Project[] = [
   {
-    name: "SQLPage",
-    developer: "SQLPage",
-    desc: "SQLPage allows developers to build dynamic web applications using only SQL queries. It currently supports MySQL, SQLite, PostgreSQL, and Microsoft SQL Server. The project is seeking contributions to expand its functionality and usability.\nOfficial website: https://sql.datapage.app\nQuick start guide: https://learnsqlpage.com/sqlpage_quickstart.html\nYouTube tutorial videos: https://www.youtube.com/@SQLPage/playlists\n\nFocus Areas for Contribution:\n1.ODBC Connector:\nImplement an ODBC connector to allow SQLPage to connect seamlessly with any database system, broadening its compatibility beyond the currently supported databases(currently supports MySQL, SQLite, PostgreSQL, and Microsoft SQL Server).\n2.New Components:\nDevelop additional components, such as an interactive calendar (like Google Calendar), to expand SQLPage's capabilities and make it more versatile for real-world applications.\n3.OIDC Integration:\nAdd OpenID Connect (OIDC) support to enable Single Sign-On (SSO) authentication directly within SQLPage, enhancing security and user management.\n4.New Additions:\nPropose and implement new features or improvements that can further enrich SQLPage’s functionality and user experience.",
-    techstack: [
-      "Rust",
-      "Handlebars",
-      "SQL",
-      "JavaScript",
-      "TypeScript",
-      "Dockerfile",
-    ],
-    github: "https://github.com/sqlpage/sqlpage",
-    mentors: [
-      {
-        name: "Ophir Lojkine",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "contact@ophir.dev",
-          twitter: "",
-        },
-      },
-      {
-        name: "Alexis Rouge Carrassat",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "alexis.rcarrassat@gmail.com",
-          twitter: "",
-        },
-      },
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-
-
-  {
-    name: "Tiled",
-    developer: "MapEditor",
-    desc: "Tiled is a free and open source, easy to use, and flexible level editor.\n\n1) Next Generation Tiled Extensions\nThis project is about exploring the possibility of using QML rather than JavaScript to author Tiled extensions.\nMore information at https://github.com/mapeditor/tiled/wiki/Next-generation-Tiled-extensions\n\n2) glTF Export for Maps\nThis project is about implement a glTF export feature for maps, allowing them to be quickly imported for use in other frameworks without that framework needing to implement support for all of Tiled's features.\nMore information at https://github.com/mapeditor/tiled/wiki/GSoC-2022#gltf-export-for-maps\n\n3) Smaller proposal idea could also be found among Tiled's open issues.",
-    techstack: ["C++", "QML", "JavaScript"],
-    github: "https://github.com/mapeditor/tiled",
-    mentors: [{
-      name: "Thorbjørn Lindeijer",
-      socials: {
-        linkedin: '',
-        discord: '',
-        email: "bjorn@lindeijer.nl",
-        twitter: "https://twitter.com/TiledApp"
-      }
-    },
-    {
-      name: "dogboydog",
-      socials: {
-        linkedin: '',
-        discord: '',
-        email: "https://github.com/dogboydog/",
-        twitter: ""
-      }
-    }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    }
-  },
-
-
-
-  {
-    name: "DebugSwift",
-    developer: "DebugSwift",
-    desc: "DebugSwift is a comprehensive toolkit designed to simplify and enhance the debugging process for Swift-based applications. Whether you're troubleshooting issues or optimizing performance, DebugSwift offers powerful features to make your debugging experience faster and more efficient.\n\n1) Main Thread Checker\nHelp create and improve a checker to detect any actions occurring off the main thread.\nMore information at https://github.com/DebugSwift/DebugSwift/issues/67\n\n2) Deep Link Opening\nContribute to the functionality that allows apps to open deep links smoothly.\nMore information at https://github.com/DebugSwift/DebugSwift/issues/28\n\n3) Improve Resources\nWork on optimizing resource management features for more efficient debugging.\nMore information at https://github.com/DebugSwift/DebugSwift/issues/88\n\nRequirements:\nXcode version: 14+\nmacOS version: Recommended for compatibility with Xcode 14 and the latest Swift features.\nDependencies: Any necessary dependencies will be mentioned within the respective project issue on GitHub.",
-    techstack: ["Swift", "Ruby"],
-    github: "https://github.com/DebugSwift/DebugSwift",
-    mentors: [{
-      name: "Matheus Gois",
-      socials: {
-        linkedin: "http://linkedin.com/in/maatheusgois/",
-        discord: "",
-        email: "matheusgoislimasilva@gmail.com",
-        twitter: ""
-      }
-    },
-    {
-      name: "Murilo Teixeira",
-      socials: {
-        linkedin: "https://www.linkedin.com/in/murilot/",
-        discord: "",
-        email: "muriloo.teixeira@gmail.com",
-        twitter: "",
-      },
-    },],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    }
-  },
-
-
-
-
-  {
-    name: "TensorZero",
-    developer: "TensorZero",
-    desc: "TensorZero is a platform designed to optimize large language model (LLM) applications by creating a feedback loop that turns production data into smarter, faster, and cheaper models.\n\nProposal Ideas:\n1) Recipes: Create new optimization recipes. Simple ones include adapting fine-tuning recipes to other providers. More complex ones include RLHF/RLAIF, APE, and more.\n\n2) Examples & Demos: Apply TensorZero to new datasets, use cases (e.g. RAG), etc. Use it to demonstrate better performance than out-of-the-box models.\n\n3) Integrations: Add support for additional inference providers like Deepseek, xAI, and others to expand TensorZero’s capabilities.\n\n4) Other smaller projects for beginners are available with the label 'good-first-issue'\nhttps://github.com/tensorzero/tensorzero/issues?q=is%3Aissue+is%3Aopen+label%3Agood-first-issue",
-    techstack: ["Python", "Rust", "Machine Learning"],
-    github: "https://github.com/tensorzero/tensorzero/",
-    mentors: [{
-      name: "Gabriel Bianconi",
-      socials: {
-        linkedin: "",
-        discord: "",
-        email: "gabriel@tensorzero.com",
-        twitter: "",
-      }
-    },
-    {
-      name: "Viraj Mehta",
-      socials: {
-        linkedin: "",
-        discord: "",
-        email: "viraj@tensorzero.com",
-        twitter: "",
-      },
-    },],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    }
-  },
-
-
-  {
-    name: "ClassroomIO",
-    developer: "ClassroomIO",
-    desc: "ClassroomIO is an open-source platform focused on improving educational workflows and classroom management. The project provides tools to simplify tasks for students, teachers, and administrators, offering features like assignment tracking, collaboration tools, and streamlined communication.\n\nProposal Ideas:\n1) Standard Code Formatting: Improve code quality and maintain consistency across the project.\nMore information at https://github.com/classroomio/classroomio/issues/516\n\n2) Self-host with Docker: Enable self-hosting with Docker for easier deployment.\nMore information at https://github.com/classroomio/classroomio/issues/508\n\n3) Self-paced Course: Implement features to create and manage self-paced courses.\nMore information at https://github.com/classroomio/classroomio/issues/513\n\n4) Export All Students: Add functionality to export student data for administrative tasks.\nMore information at https://github.com/classroomio/classroomio/issues/502\n\n5) Background Jobs: Improve background job handling for better performance.\nMore information at https://github.com/classroomio/classroomio/issues/494\n\n6) Improve Email Sending: Enhance email functionality for better reliability and performance.\nMore information at https://github.com/classroomio/classroomio/issues/519\n\n7) Email Tests: Implement proper testing for email functionality.\nMore information at https://github.com/classroomio/classroomio/issues/520\n\n8) Experiments:\n   - Youtube to Course: Convert YouTube content into course material.\n   More information at https://github.com/classroomio/classroomio/issues/486\n   \n   - Documentation and Blog Posts to Course: Create courses from documentation and blogs.\n   More information at https://github.com/classroomio/classroomio/issues/521\n\n9) Minor Improvements:\n   - Additional UI and functionality fixes.\n   https://github.com/classroomio/classroomio/issues/488\n   https://github.com/classroomio/classroomio/issues/478\n   https://github.com/classroomio/classroomio/issues/489",
-    techstack: [
-      "PLpgSQL",
-      "Svelte",
-      "HTML",
-      "JavaScript",
-      "TypeScript",
-      "MDX",
-    ],
-    github: "https://github.com/classroomio/classroomio",
-    mentors: [
-      {
-        name: "Rotomi Best",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/best-r-7487b283/",
-          discord: "rotimibest",
-          email: "best@classroomio.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Brisa",
-    developer: "Brisa",
-    desc: "Brisa is an experimental web framework inspired by others, taking the best of each one.\n\nProposal Ideas:\n1) Expand Documentation and Playground: Make the framework more accessible by improving documentation and creating an interactive playground.\n\n2) Develop Adapters: Extend cloud provider support by creating adapters for various platforms.\n\n3) UI Component Library: Build a UI component library (inspired by shadcn) entirely with Brisa, showcasing its capabilities.\n\n4) TypeScript Type Definitions: Improve TypeScript type definitions to enhance the developer experience.\n\n5) Bug Fixes: Contribute by fixing bugs labeled as \"good first issue\" to onboard new contributors.",
-    techstack: [
-      "TypeScript",
-      "CSS",
-    ],
-    github: "https://github.com/brisa-build/brisa",
-    mentors: [
-      {
-        name: "Aral Roca Gomez",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "contact@aralroca.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Albert Sabaté",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "albert@zenettechnology.com",
-          twitter: "",
-        },
-      },
-    ],
-    socials: {
-      linkedin: "",
-      discord: "https://discord.com/invite/MsE9RN3FU4",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "DashPress",
-    developer: "DashPress",
-    desc: "Dashpress is an admin app generator to help you transform your database schema into a sleek, customizable and performant admin dashboards quickly and efficiently.\n\nProposal Ideas:\n1. Resend Integration\n2. WhatsApp Integration\n3. Allow users inject analytics scripts: https://github.com/dashpresshq/dashpress/issues/102 \n\nMore Information about contributing at:\nhttps://github.com/dashpresshq/dashpress/blob/master/docs/CONTRIBUTING.md",
-    techstack: [
-      "TypeScript"
-    ],
-    github: "https://github.com/dashpresshq/dashpress",
-    mentors: [
-      {
-        name: "Ayobami Akingbade",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "akingbadefred@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "Laudspeaker",
-    developer: "Laudspeaker",
-    desc: "Proposal Ideas (ranked in priority):\n\n1) Add SMTP support to Laudspeaker\n-- Laudspeaker offers email sending capabilities via API like sendgrid and mailgun, we should allow users to configure using their own SMTP server as well\n\n2) Add whatsapp support to Laudspeaker\n-- Laudspeaker aims to offer messaging across any messaging platform, we should offer the ability to add, and send via a users whatsapp business account\n\n3) Add React Native library to Laudspeaker\n-- Laudspeaker has mobile sdks for android, and ios, we should add one for react native as well, as well as docs and a sample app showing how to set this up\n\n4) Add New UpsertBatch API endpoint\n-- Laudspeaker currently has an upsert endpoint, which allows developers to update or insert a single user at a time, we should also support an upsertbatch endpoint which allows a user to add or edit an arbitrarily large number of users at once\n\n5) Add Deep linking functionality to ios and android sdks\n\n6) Add Install attribution functionality to ios and android sdks\n\n7) Test, and improve deletion API\n-- Laudspeaker has a delete function, but we need to test it works in all scenarios and update if there are errors\n\n8) Add deployment instructions for community, and easy deploy to render quickstart\n-- laudspeaker wants to make it easier for the community to use the product, and part of that is making it easier to deploy\n\n9) Add Live Activities support to Laudspeaker's ios sdk\n-- Apple recently released live Activities",
-    techstack: ["TypeScript", "CSC", "Javascript", "Shell", "Dockerfile", "Java", "Swift", "MDX"
-    ],
-    github: "https://github.com/laudspeaker/laudspeaker",
-    mentors: [
-      {
-        name: "Mahamad C.",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/mahamad-c-a025b9193/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      },
-      {
-        name: "Abheek Basu",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/abheek-basu-4a72a398/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-  {
-    name: "Laudspeaker Swift SDK",
-    developer: "Laudspeaker",
-    desc: "Proposal Ideas (ranked in priority):\n\n1) Add SMTP support to Laudspeaker\n-- Laudspeaker offers email sending capabilities via API like sendgrid and mailgun, we should allow users to configure using their own SMTP server as well\n\n2) Add whatsapp support to Laudspeaker\n-- Laudspeaker aims to offer messaging across any messaging platform, we should offer the ability to add, and send via a users whatsapp business account\n\n3) Add React Native library to Laudspeaker\n-- Laudspeaker has mobile sdks for android, and ios, we should add one for react native as well, as well as docs and a sample app showing how to set this up\n\n4) Add New UpsertBatch API endpoint\n-- Laudspeaker currently has an upsert endpoint, which allows developers to update or insert a single user at a time, we should also support an upsertbatch endpoint which allows a user to add or edit an arbitrarily large number of users at once\n\n5) Add Deep linking functionality to ios and android sdks\n\n6) Add Install attribution functionality to ios and android sdks\n\n7) Test, and improve deletion API\n-- Laudspeaker has a delete function, but we need to test it works in all scenarios and update if there are errors\n\n8) Add deployment instructions for community, and easy deploy to render quickstart\n-- laudspeaker wants to make it easier for the community to use the product, and part of that is making it easier to deploy\n\n9) Add Live Activities support to Laudspeaker's ios sdk\n-- Apple recently released live Activities",
-    techstack: ["Swift"
-    ],
-    github: "https://github.com/laudspeaker/laudspeaker-swift-sdk",
-    mentors: [
-      {
-        name: "Mahamad C.",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/mahamad-c-a025b9193/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      },
-      {
-        name: "Abheek Basu",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/abheek-basu-4a72a398/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Laudspeaker Android SDK",
-    developer: "Laudspeaker",
-    desc: "Proposal Ideas (ranked in priority):\n\n1) Add SMTP support to Laudspeaker\n-- Laudspeaker offers email sending capabilities via API like sendgrid and mailgun, we should allow users to configure using their own SMTP server as well\n\n2) Add whatsapp support to Laudspeaker\n-- Laudspeaker aims to offer messaging across any messaging platform, we should offer the ability to add, and send via a users whatsapp business account\n\n3) Add React Native library to Laudspeaker\n-- Laudspeaker has mobile sdks for android, and ios, we should add one for react native as well, as well as docs and a sample app showing how to set this up\n\n4) Add New UpsertBatch API endpoint\n-- Laudspeaker currently has an upsert endpoint, which allows developers to update or insert a single user at a time, we should also support an upsertbatch endpoint which allows a user to add or edit an arbitrarily large number of users at once\n\n5) Add Deep linking functionality to ios and android sdks\n\n6) Add Install attribution functionality to ios and android sdks\n\n7) Test, and improve deletion API\n-- Laudspeaker has a delete function, but we need to test it works in all scenarios and update if there are errors\n\n8) Add deployment instructions for community, and easy deploy to render quickstart\n-- laudspeaker wants to make it easier for the community to use the product, and part of that is making it easier to deploy\n\n9) Add Live Activities support to Laudspeaker's ios sdk\n-- Apple recently released live Activities",
-    techstack: ["Java"
-    ],
-    github: "https://github.com/laudspeaker/laudspeaker-android-sdk",
-    mentors: [
-      {
-        name: "Mahamad C.",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/mahamad-c-a025b9193/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      },
-      {
-        name: "Abheek Basu",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/abheek-basu-4a72a398/",
-          discord: "",
-          email: "",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Pumpbin",
-    developer: "Pumpbin",
-    desc: "The iced has released version 0.13.1, but this project is still using version 0.13.0-dev.\n\n1. Participants should update the project to version 0.13.1 of Iced, test the changes, and resolve any potential issues caused by the version upgrade.\n\n2. Check if the remaining dependencies can be upgraded, and update them.\n\n3. This project has English documentation, but unfortunately, it is mostly AI-translated with minimal manual verification. One would require to gain a thorough understanding of PumpBin and subsequently improve the English documentation, it would be a significant contribution and quite a challenging task.\n\nImportant points:\n1. Proficiency in the Rust programming language is required.\n2. After modifying the code, a comprehensive test is required.\n3. Initiate a discussion before making significant changes.",
-    techstack: [
-      "Rust", "Shell"
-    ],
-    github: "https://github.com/pumpbin/pumpbin",
-    mentors: [
-      {
-        name: "Xingquan Liu",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "b1nhack@proton.me",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "rust-shellcode",
-    developer: "b1nhack",
-    desc: " The project uses the windows-sys crate (from the windows-rs repository by Microsoft).\n\n1. Participants should update it to the latest version to take advantage of recent improvements, bug fixes, and updates provided by the maintainers.\n\n2. If new techniques for executing shellcode on the Windows platform have emerged recently but are not included in the rust-shellcode repository, participants are encouraged to identify and add them.\n\nImportant points:\n1. Proficiency in the Rust programming language is required.\n2. After modifying the code, a comprehensive test is required.\n3. Initiate a discussion before making significant changes.",
-    techstack: [
-      "Rust", "Shell"
-    ],
-    github: "https://github.com/b1nhack/rust-shellcode",
-    mentors: [
-      {
-        name: "Xingquan Liu",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "b1nhack@proton.me",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Holidays Framework",
-    developer: "Vacanza",
-    desc: "Proposal ideas:\n\nv1 Version: Focus on breaking changes for improved structure, standardization, and feature expansion.\n\n- Design and implement custom exceptions system\n- Work on entities standardization according to ISO-3166 standard\n- Improve l10n approach to have messages grouped by locale\n- Migrate documentation to mkdocs\n- Implement iCal data export support\n\nMore details at: https://github.com/vacanza/holidays/labels/woc2025",
-    techstack: [
-      "Python"
-    ],
-    github: "https://github.com/vacanza/holidays/",
+    name: "OWASP Nest",
+    developer: "OWASP Nest",
+    desc: "Problem Statement\n\nOWASP Nest is a comprehensive platform designed to enhance collaboration and contribution within the OWASP community. The application serves as a central hub for exploring OWASP projects and ways to contribute to them, empowering contributors to find opportunities that align with their interests and expertise.\n\nFocus Areas\n\nWe have multiple focus areas:\nBackend (Python, Django, Ninja, Strawberry)\nFrontend (TypeScript, Next.js, React, TailwindCSS)\nNestBot (Slack API, Python, OpenAI API)\n\nStudent Contribution Guide (Idea Page)\n\nAny open and available for work issues from https://github.com/OWASP/Nest/issues\nWe're accepting new issues too (subject to approval). If accepted we'll add a WoC 5.0 label for easy search and will help students to come up with meaningful and realistic projects/milestones.",
+    techstack: ["Python", "Django", "TypeScript", "React", "Next.js", "TailwindCSS", "GraphQL", "Docker", "AWS"],
+    github: "https://github.com/OWASP/Nest",
     mentors: [
       {
         name: "Arkadii Yakovets",
         socials: {
           linkedin: "https://www.linkedin.com/in/arkid15r/",
           discord: "arkid15r",
-          email: "arkadii.yakovets@gmail.com",
-          twitter: "",
-        },
-      }, {
-        name: "Kate Golovanova",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/kate-golovanova",
-          discord: "",
-          email: "kasya8888@gmail.com",
-          twitter: "",
-        },
-      }
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "BriefBox",
-    developer: "Charles David Mupende",
-    desc: "Briefbox is a tool designed for archiving emails from multiple IMAP and POP3 accounts. It provides a user-friendly web interface to manage email accounts, search archived emails, and view email details along with attachments.\n\nProposal Ideas:\n1. Search Optimization: Develop methods to quickly locate relevant emails at scale.\n2. Email Import/Export: Create features for importing and exporting emails easily.\n3. OAuth Integration: Implement OAuth to link Briefbox with other email providers for easier access.",
-    techstack: ["Python", "Javascript"
-    ],
-    github: "https://github.com/bandundu/email-archiver",
-    mentors: [
-      {
-        name: "Charles David Mupende",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/mahamad-c-a025b9193/",
-          discord: "charlesmcgray",
-          email: "charlesdavid@mupende.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "Snapcrafters.org",
-    developer: "Snapcrafters",
-    desc: "Proposal Ideas:\n\n1. Blog Section: Create a new section to display blog posts. Participants can take inspiration from https://soumyadghosh.github.io/website/ or https://merlijn.sebrechts.be/.\n\n2. Contact Page: Develop a functional contact page. Allow users to directly contact and request snaps.\n\nDocumentation Reference: https://gohugo.io/documentation/\n\nGeneral Notes for Participants:\n\n1. Core Skills Needed:\n   - Bash scripting.\n   - Hugo development.\n   - Debugging and maintaining software/snaps.\n\n2. Students are encouraged to propose their own ideas, especially around improving the CI system or enhancing the website."
-    ,
-    techstack: ["HTML", "JavaScript", "Hugo", "Bash"
-    ],
-    github: "https://github.com/snapcrafters/snapcrafters.org",
-    mentors: [
-      {
-        name: "Soumyadeep Ghosh",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/soumyadghosh/",
-          discord: "soumyatheman",
-          email: "soumyadghosh@ubuntu.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "GDevelop",
-    developer: "GDevelop",
-    desc: "GDevelop is a full-featured, no-code, open-source game development software. You can build 2D, 3D and multiplayer games for mobile (iOS, Android), desktop and the web. GDevelop is fast and easy to use: the game logic is built up using an intuitive and powerful event-based system and reusable behaviors.\n\nFor further detail visit following link: https://gdevelop.notion.site/Public-WOC-2025-Project-descriptions-and-mentors-1618b47a33d280da9b4ef9c1232e8bbc"
-    ,
-    techstack: ["C", "C++", "JavaScript", "TypeScript", "CSS"
-    ],
-    github: "https://github.com/4ian/GDevelop",
-    mentors: [
-      {
-        name: "Clemet",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "clement@gdevelop.io",
+          email: "arkadii.yakovets@owasp.org",
           twitter: "",
         },
       },
       {
-        name: "Alexandre",
+        name: "Kateryna Golovanova",
         socials: {
-          linkedin: "",
+          linkedin: "https://www.linkedin.com/in/kate-golovanova/",
           discord: "",
-          email: "alexandre@gdevelop.io ",
+          email: "kateryna.golovanova@owasp.org",
+          twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "Quizora",
+    developer: "Development Society AEC",
+    desc: "• Problem Statement:\nTraditional learning and assessment methods often lack engagement and real-time feedback, leading to lower student participation. \"Rapid Quiz Relay\" solves this by introducing a gamified, fast-paced environment where users can test their knowledge under time constraints, fostering competitive learning.\n• Focus Areas:\no Backend API Development & Real-time data handling.\no UI/UX improvements for seamless quiz transitions.\no Performance optimization for concurrent users.\no Gamification logic (Leaderboards, Relay timers).\n• Student Contribution Guide (Idea Page):\nStudents will work on enhancing the quiz engine, implementing new question types, and optimizing the relay timer logic.\n\no Milestone 1: Setup environment and fix minor UI bugs.\no Milestone 2: Implement user authentication and profile tracking.\no Milestone 3: Develop real-time leaderboard and \"Relay\" mode features.",
+    techstack: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Convex"],
+    github: "https://github.com/Nilam-Kumari-Mahato/Quizora",
+    mentors: [
+      {
+        name: "Asif Qamar",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/asif-qamar",
+          discord: ".gamedotexe",
+          email: "asifqamar1832004@gmail.com",
           twitter: "",
         },
       },
       {
-        name: "Davy",
+        name: "Nilam Kumari Mahato",
         socials: {
-          linkedin: "",
-          discord: "",
-          email: "davy@gdevelop.io",
+          linkedin: "https://www.linkedin.com/in/nilam-kumari-mahato-5a2710307",
+          discord: "Nilam_Mahato",
+          email: "nilamkumarimahato10@gmail.com",
           twitter: "",
         },
       },
       {
-        name: "Florian",
+        name: "Prerna Priya",
+        socials: {
+          linkedin: "www.linkedin.com/in/prerna-priya-ab3581329",
+          discord: "yuna086841",
+          email: "prerp.6299@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Arnab chatterjee",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/arnab-chatterjee-905ab3219/",
+          discord: "arnabch20k",
+          email: "arnabchatterjee.ac.2@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Amartya Chowdhury",
+        socials: {
+          linkedin: "https://linkedin.com/in/amartya-chowdhury",
+          discord: "@paraxius",
+          email: "amartyachowdhury4@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Swarup Goswami",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/swarup-goswami-7a9444311",
+          discord: "swarup_goswami",
+          email: "goswamiswarup97@gmail.com",
+          twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "Orycon (Event Management System)",
+    developer: "Open Source Chandigarh",
+    desc: "Orcyon is a comprehensive platform built with Next.js, Node.js, and MongoDB to help college societies plan, organize, and execute events with ease. It streamlines everything from content creation and social media scheduling to logistics coordination and real-time attendance tracking. Designed for Students, Team Admins, and specialized teams, the system provides a centralized and intuitive workspace that enhances collaboration, automates repetitive tasks, and improves the overall efficiency of event management.\n\nDetailed Project Description\nProblem Statement\nCollege societies often struggle to manage events efficiently due to scattered tools for planning, content creation, social media, logistics, and attendance tracking. This Event Management System solves that problem by unifying all workflows into a single platform, enabling teams to collaborate smoothly while giving students an easy way to register and mark attendance.\nAlthough the system greatly improves coordination and execution, it currently lacks features like advanced analytics, automated social media publishing, and integrated payment handling. These enhancements are planned for future releases to further boost efficiency and scalability.\nFuture Focus Areas:\n• Backend Logic: Implementing advanced modules such as automated attendance processing, documentation generation, post-event analytics, and improved role-based access across teams.\n• UI/UX: Enhancing dashboards for each team, adding intuitive scheduling interfaces, improving the idea management flow, and refining the overall navigation for a smoother multi-team experience.\n• Technical Writing: Creating clear documentation for team workflows—covering event planning, content creation, social media scheduling, logistics management, and onboarding guides for new users.\nStudent Contribution Guide\nThe project will have two phases. Completing Phase 1 is required before moving to Phase 2, while Phase 2 is optional and can be completed if time permits.\nPhase 1: Implementation of New Core Features\nIn this phase, the student is expected to focus on backend and frontend development to deliver core system improvements. Features include:\n1. Attendance Automation Enhancements: Implement improved logic for automatic attendance generation, walk-in detection, and streamlined QR-based verification.\n2. Social Media Scheduler Improvements: Build features for calendar-based scheduling, automatic reminders, and version control for social posts (text, image, video).\n3. Content Documentation Generator: Develop the automated documentation generation tool that compiles event details, speeches, and write-ups into structured reports.\n4. Meeting Scheduler Expansion: Add multi-team invite support, RSVP tracking, and integration with common calendar formats.\n5. Idea Box Upgrades: Implement voting, commenting, and category tagging, along with a cleaner moderation workflow for Team Admins.\n6. Logistics & Feedback Analyzer: Enhance the analytics pipeline to process event feedback and provide post-event summaries using charts, sentiment indicators, or basic insights.\n7. Hiring Portal Development: Develop the hiring portal with options to mark candidates as Selected, Maybe, or Rejected, and the ability to transfer applicants between teams.\nPhase 2: Technical Writing and Knowledge Resources\nThis phase focuses on creating educational and onboarding materials for new users and teams across the system.\n1. Team Workflow Guides: Write clear documentation explaining how each team (Organising, Content, Social Media, Logistics, Admin) should use the system for their daily tasks.\n2. Feature Tutorials: Produce step-by-step guides for modules built in Phase 1—such as scheduling posts, generating documentation, running meetings, or analyzing feedback.\n3. Event Management Handbook: Create a structured learning section with best practices for planning and executing events using the platform.\n4. Student Onboarding Material: Write simple, visual guides showing students how to log in, register for events, and mark attendance via QR codes.",
+    techstack: ["Next.js", "React", "Node.js", "Express.js", "MongoDB", "Prisma", "Turborepo", "Git", "GitHub Actions"],
+    github: "https://github.com/Open-Source-Chandigarh/orycon",
+    mentors: [
+      {
+        name: "Angad Sudan",
+        socials: {
+          linkedin: "https://linkedin.com/in/angadsudan/",
+          discord: "@angadsudan",
+          email: "angadsudan453@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Ayush Chauhan",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/ayuch",
+          discord: "@bakayu",
+          email: "ayu.0067abc@gmail.com",
+          twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "gitx",
+    developer: "Open Source Chandigarh",
+    desc: "gitx is a Terminal User Interface (TUI) built with Golang to help you learn and interact with git. It provides a visual way to handle common git commands, making it easier for both beginners and experienced users to manage their repositories without leaving the terminal. Tech Stack • Language: Golang • Frameworks: Bubbletea, Hugo • Tools: Git, Github Actions, Hugo for docs Detailed Project Description 1. Problem Statement: Beginners often struggle with git commands when getting started with git and version control, gitx was developed to solve this very problem and provide a platform inside the terminal to provide a beginner friendly interface, which provides an abstraction over git, takes away the complexity and allows user to learn and use git more easily. While gitx provides a great overview of git repositories, currently it lacks granular control for advanced workflows (like staging specific lines) and the documentation on tutorials and guides is also lacking. 2. Focus Area: • Backend Logic: Implementing new features to add more git operations to the Terminal User Interface. • UI/UX: Enhancing the visual diff viewer and adding interactive elements. • Technical Writing: Writing documentation for the \"Learn\" section on how to use the TUI. 3. Student Contribution Guide: The project will have 2 phases, completing the first is necessary to move onto the second phase, while the second phase would be optional and can be completed if the time allows. Phase 1: Implementation of New Core Features In this phase, the student would be expected to focus on coding and delivering the features listed on gitxtui.github.io/docs/contribute/roadmap; Also listed below: • Repository Initialization: Implement the ability to initialize a new Git repository (like git init) directly from the startup screen or command menu if one doesn't exist. • Safety Warnings: Add a confirmation and warning system for sensitive actions, such as initializing a repository in a non-empty directory or home folder. • Improved Visual Diff Viewer: Refactor the MainPanel view to provide a clearer, syntax-highlighted, or side-by-side representation of file changes. • Interactive Staging: Develop the functionality to select and stage specific lines or code hunks interactively from within the diff viewer. • Custom Keybindings: Update configuration file logic to allow users to remap keybindings (currently hardcoded in keys.go). Phase 2: Technical Writing and Education Resources This phase focuses on documenting and helping new users learn git through gitx. • \"Learn\" Section Content: specific hands-on document series explaining how to use the TUI for various Git workflows. • Feature Tutorials: Comprehensive guides and examples for the new features built in Phase 1 (e.g., \"How to interactively stage changes\").",
+    techstack: ["Golang", "Bubbletea", "Hugo", "Git", "Github Actions"],
+    github: "https://github.com/gitxtui/gitx",
+    mentors: [
+      {
+        name: "Ayush Chauhan",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/ayuch",
+          discord: "@bakayu",
+          email: "ayu.0067abc@gmail.com",
+          twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "Pyre",
+    developer: "Open Source Chandigarh",
+    desc: "Pyre is a custom-built, modular 3D graphics engine designed to bridge the gap between theoretical graphics programming and practical game engine development. It focuses on clean architecture, exposing the raw OpenGL pipeline while managing complexity through robust design patterns like ECS (Entity Component System).\n\nDetailed Project Description\nProblem Statement Many computer science students learn graphics theory—the mathematics of drawing a single triangle—but never cross the chasm to building a system robust enough to be called an \"engine.\"\nSolution Pyre addresses this by offering a robust codebase that exposes students to the raw OpenGL pipeline. It currently supports advanced features like Deferred-style architecture preparation, Stencil buffers, Framebuffers, Skyboxes, and Blinn-Phong lighting.\nFocus Areas:\n• Engine Tooling: Building in-engine GUI (ImGui) tools for runtime debugging and scene manipulation.\n• Mathematics: Upgrading core systems from Euler angles to Quaternions.\n• Visual Fidelity: Implementing advanced post-processing (Gaussian Blur, Edge Detection) and lighting visualization.\n• Robustness: Creating error-safe asset loading pipelines to handle missing files gracefully.\nStudent Contribution Guide\nWe have categorized contribution tasks into three tiers based on complexity and the required background in Linear Algebra and C++.\nTier 1: Beginner / Warm-up Focus: Input handling, Game Logic, and Basic Visual Helpers.\n• Debug Toggle System: Implement a runtime toggle (e.g., binding the H key) to show/hide helper objects like light diamonds that currently clutter the view.\n• Camera Speed Control: Implement dynamic camera speed adjustment (e.g., pressing + / - to increase/decrease speed) to assist with navigating large scenes vs inspecting details.\n• Expanded Light Visualizers: Implement wireframe gizmos for Directional Lights (lines indicating sun direction) and Spotlights (wireframe cones indicating influence and cutoff).\nTier 2: Intermediate (The \"Editor\" Features) Focus: Library Integration, UI, and Buffer Manipulation.\n• ImGui Integration (Primary Focus): Integrate the Dear ImGui library into the render loop to create a basic \"Inspector\" window for changing light colors, intensity, and positions in real-time.\n• Advanced Post-Processing: Implement Gaussian Blur (requires multi-pass rendering) and Edge Detection (Sobel Operator) for stylized/outline rendering.\n• Asset Loader Hardening: Improve the Assimp model loader to detect missing texture files, log a warning, and load a default \"checkerboard\" texture instead of crashing or showing errors.\nTier 3: Advanced (Math & Algorithms) Focus: Linear Algebra and Complex Rendering Pipelines.\n• Quaternion Camera System: Upgrade the camera class from Euler Angles to Quaternions to eliminate Gimbal Lock and allow for true 6-DOF (Degree of Freedom) movement.\n• Shadow Mapping: Implement the first pass of a Shadow Mapping system by rendering scene depth from the Light's perspective to a Framebuffer and using it to determine occluded fragments.",
+    techstack: ["C++", "OpenGL", "GLFW", "GLM", "Assimp", "stb_image", "CMake", "Dear ImGui"],
+    github: "https://github.com/Open-Source-Chandigarh/pyre",
+    mentors: [
+      {
+        name: "Dhruv Ranger",
+        socials: {
+          linkedin: "dhruv-ranger-716564383",
+          discord: "dhruv0154",
+          email: "dhruvranger97@gmail.com",
+          twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "Ak-dskit (DsKit)",
+    developer: "Programmers' Paradise Technical Society",
+    desc: "Problem Statement:\nData scientists and ML engineers often spend 60-80% of their time on repetitive tasks like data cleaning, EDA, preprocessing, and basic modeling. There's a need for a unified, production-ready toolkit that wraps complex operations into simple 1-line commands while maintaining flexibility and comprehensive feature coverage.\nAk-dskit solves this by providing 221+ wrapper functions that streamline the entire ML pipeline - from data loading to model deployment - making data science accessible, efficient, and production-ready.\nFocus Areas:\nStudents can contribute to various aspects of the project:\n\nCore Features Enhancement\n• Extending data cleaning and preprocessing capabilities\n• Adding new feature engineering methods\n• Improving automated EDA functions\n• Enhancing model validation utilities\n• Visualization & Explainability\n\n• Creating new interactive visualization functions\n• Improving SHAP integration for model explainability\n• Building custom plotting utilities for specific use cases\n• Developing hyperplane visualization for advanced algorithms\n• AutoML & Optimization\n• Expanding hyperparameter tuning capabilities\n• Adding support for new ML algorithms\n• Implementing ensemble methods\n• Building automated feature selection tools\n• Documentation & Testing\n• Writing comprehensive tutorials and guides\n• Creating Jupyter notebook examples\n• Developing unit tests for existing functions\n• Improving API documentation\n• DevOps & Deployment\n• Setting up CI/CD pipelines\n• Creating Docker containers for deployment\n• Building model serving utilities\n• Implementing monitoring and logging features\n• Database & Time Series\n• Enhancing database utility functions\n• Expanding time series analysis capabilities\n• Adding support for new data sources\n• Building data versioning tools\n• Student Contribution Guide (Idea Page)\n\nWhat Students Will Work On:\n• Beginner Level:\n1. Writing documentation and tutorials\n2. Creating example notebooks\n3. Adding unit tests for existing functions\n4. Fixing bugs and improving error handling\n\n5. Enhancing function docstrings\n• Intermediate Level:\n1. Implementing new preprocessing methods\n2. Adding visualization functions\n3. Creating data validation utilities\n4. Building feature engineering tools\n5. Developing data profiling capabilities\n• Advanced Level:\n1. Implementing advanced AutoML features\n2. Building custom ML algorithms\n3. Creating model deployment pipelines\n4. Developing distributed computing support\n5. Implementing neural network wrappers\n\nExpected Outcomes:\n\n1. At least 10-15 new utility functions added to the library\n2. Comprehensive test coverage (target: >80%)\n3. 5+ tutorial notebooks demonstrating real-world use cases\n4. Improved documentation with API reference updates\n5. Performance optimization for core functions\n6. New features like automated report generation, data drift detection, or A/B testing utilities",
+    techstack: ["Python", "NumPy", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn", "Plotly", "SHAP", "XGBoost", "LightGBM", "CatBoost", "Optuna", "Hyperopt", "PyPI"],
+    github: "https://github.com/Programmers-Paradise/DsKit",
+    mentors: [
+      {
+        name: "Aksh Agrawal",
         socials: {
           linkedin: "",
-          discord: "",
-          email: "florian@gdevelop.io",
+          discord: "hextrovert_10",
+          email: "aksh.300012824005@csvtu.ac.in",
           twitter: "",
         },
-      }
-
-
+      },
     ],
     socials: {
       linkedin: "",
@@ -572,224 +237,45 @@ const projectData: Project[] = [
     },
   },
   {
-    name: "Snapcrafters CI",
-    developer: "Snapcrafters",
-    desc: "Proposal Ideas:\n\n1. Implement CI System in Repositories:\n   - Integrate the custom CI system into snap repositories that don’t currently use it.\n   - Verify and update snaps as needed. A comprehensive list of snaps, including their CI integration status and whether they are up-to-date, can be found here: https://snapcrafters.org/snap-packages/.\n\nDocumentation Reference: https://github.com/snapcrafters/ci-workshop\n\nGeneral Notes for Participants:\n\n1. Core Skills Needed:\n   - Bash scripting.\n   - Hugo development.\n   - Debugging and maintaining software/snaps.\n\n2. Students are encouraged to propose their own ideas, especially around improving the CI system or enhancing the website.",
-    techstack: ["Bash", "Makefile"
-    ],
-    github: "https://github.com/snapcrafters/ci",
-    mentors: [
-      {
-        name: "Soumyadeep Ghosh",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/soumyadghosh/",
-          discord: "soumyatheman",
-          email: "soumyadghosh@ubuntu.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "The FFmpeg snap",
-    developer: "snapcrafters",
-    desc: "Proposal Ideas:\n\n1. Update the FFmpeg Snap:\n   - Fix existing issues in the FFmpeg snap.\n   - Update the snap to align with the latest FFmpeg release.\n\nDocumentation Reference: https://github.com/snapcrafters/snap-quickstart-workshop\n\nGeneral Notes for Participants:\n\n1. Core Skills Needed:\n   - Bash scripting.\n   - Hugo development.\n   - Debugging and maintaining software/snaps.\n\n2. Students are encouraged to propose their own ideas, especially around improving the CI system or enhancing the website."
-    ,
-    techstack: ["Shell"
-    ],
-    github: "https://github.com/snapcrafters/ffmpeg",
-    mentors: [
-      {
-        name: "Soumyadeep Ghosh",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/soumyadghosh/",
-          discord: "soumyatheman",
-          email: "soumyadghosh@ubuntu.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "libcupsfilters",
+    name: "Complete CI testing for OpenPrinting projects",
     developer: "OpenPrinting",
-    desc: "Proposal Ideas:\n Add support for JPEG-XL as input format: https://github.com/OpenPrinting/libcupsfilters/issues/73\n Participants are encouraged to explore OpenPrinting in general (https://github.com/OpenPrinting/) and propose their own ideas."
-    ,
-    techstack: ["C", "C++"
-    ],
-    github: "https://github.com/OpenPrinting/libcupsfilters",
+    desc: "Problem Statements:- 1.As the software components we develop at OpenPrinting are an essential part of the operating system infrastructure, we want to have a solid CI testing of each commit to our GitHub repositories. CUPS (\"cups\" repository for 2.x) has already excellent CI done by Michael Sweet, consisting of GitHub actions/workflows which automatically apply static analysers, build and execution tests on different architectures and distros, … This we want to have also in the other projects on OpenPrinting.    2.The go-avahi project provides Go bindings for the Avahi/mDNS/DNS-SD stack and is used for network service discovery functionality within the OpenPrinting ecosystem. It acts as a bridge between Go applications and the underlying Avahi daemon through D-Bus.\n\nCurrently, go-avahi has no fuzz testing, limited test coverage, and several input-handling paths may fail in unexpected ways for malformed or adversarial input. For this project,, fuzzing is especially important to uncover crashes, panics, and edge cases.\n\nThis project aims to develop a comprehensive fuzzing setup for go-avahi, improve test coverage, and integrate the project into the OSS-Fuzz ecosystem to enable continuous, long-term fuzz testing.   3.Currently, the go-mfp project, aimed to implement a full-featured behaviour-accurate MFP simulator together with collection of the MFP testing/validation/troubleshooting tools, lacks the support of WS-Scan protocol. We already have eSCL, partially implemented IPP, virtual USB MFP simulation (IPP over USB and legacy 7/1/1 USB printer), but WS-Scan support is not yet completed.\n4.Currently, the go-mfp simulator already has very basic support of the legacy USB 7/1/1 printer emulation. However, it doesn't somehow interpret the data sent to the emulated printer and doesn't provide any response (as 7/1/2 devices should do).\n\nThe project goal is to implement the Go io.Reader (for 7/1/1 devices) and Go io.ReadWriter that consumes raw data bytes, sent to the emulated printer and able to properly identify document format being sent (i.e., PostScript, PDF, PCL5, ESC/P, …) and based on that identification properly detect the document or page boundaries (for example, PostScript and PDF documents are terminated by the Ctrl-D character, ESC/P and PCL5 may use end-of-page character etc).\n\nHaving that implemented we can add saving documents to file for further analysis and troubleshooting and document rendering for printed image evaluation.\n\nAlso, the bidirectional (USB 7/1/2) printers implement a simple PJL interpreter and generate proper responses, which also needs to be implemented in the io.ReadWriter interface with functionality enough to make CUPS happy.\n5.The contributor should study how the legacy printer works, how the graphical documents are sent to the printer and how the printer recognizes that document transmission is finished. The printed documents need to be extracted from the unstructured host to printer data flow and passed separately to the upper layer, which will decide what to do with these documents (just to save to the log file, to render etc).\n\nRendering of printed documents is out of the scope of this project, so very detailed understanding of the relevant formats is not required.\n\nAlso, for the implementation of the bidirectional (USB 7/1/2) printers the contributor needs to understand the behaviour expectations, based on specifications and CUPS implementation and to write a simple simulator.\n\nThe representation of the emulated printer as a virtual USB device already done in the go-mfp and out of scope of this project. At this level the contributor needs only to implement the Go io.Reader and io.ReadWriter interfaces that can properly consume the data sent to the printer and to generate the proper response, the task of transporting this data from/to the host is out of scope of this project (and already solved at the first glance).\n\nAs result of this project, the code contribution into the go-mfp is expected, with the reasonable test coverage and integration with the \"big project\".",
+    techstack: ["C", "Shell", "GIT", "Github actions", "Static analysers"],
+    github: "https://github.com/OpenPrinting/libcupsfilters, https://github.com/OpenPrinting/cups-filters, https://github.com/OpenPrinting/cpdb-libs, https://github.com/OpenPrinting/cpdb-backend-cups, https://github.com/OpenPrinting/cups-snap, https://github.com/OpenPrinting/libppd, https://github.com/OpenPrinting/pappl-retrofit",
     mentors: [
       {
         name: "Till Kamppeter",
         socials: {
-          linkedin: "",
+          linkedin: "https://www.linkedin.com/in/kamppetertill/",
           discord: "tillkamppeter",
           email: "till.kamppeter@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Alexander Pevzner",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/alexander-pevzner-6046161/",
+          discord: "",
+          email: "pzz@apevzner.com",
           twitter: "",
         },
       },
       {
         name: "Uddhav Phatak",
         socials: {
-          linkedin: "",
+          linkedin: "https://www.linkedin.com/in/uddhavphatak",
           discord: "",
-          email: "uddhavphatak2022@vitbhopal.ac.in",
-          twitter: "",
-        },
-      }
-
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-  {
-    name: "Fuzzing",
-    developer: "OpenPrinting",
-    desc: "Proposal Ideas:\n\nApply OSS-Fuzz to cups-browsed: https://github.com/OpenPrinting/fuzzing/issues/4\n Participants are encouraged to explore OpenPrinting in general (https://github.com/OpenPrinting/) and propose their own ideas."
-    ,
-    techstack: ["C", "C++", "Shell", "Makefile"
-    ],
-    github: "https://github.com/OpenPrinting/fuzzing",
-    mentors: [
-      {
-        name: "Till Kamppeter",
-        socials: {
-          linkedin: "",
-          discord: "tillkamppeter",
-          email: "till.kamppeter@gmail.com",
+          email: "uddhavphatak@gmail.com",
           twitter: "",
         },
       },
       {
-        name: "Jiongchi Yu",
+        name: "Mohammed Imaduddin",
         socials: {
-          linkedin: "",
+          linkedin: "https://www.linkedin.com/in/mdimado/",
           discord: "",
-          email: "jiongchiyu@gmail.com",
-          twitter: "",
-        },
-      },
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "cups-browsed",
-    developer: "OpenPrinting",
-    desc: "Proposal Ideas:\n\nReview locking/multi-threading implementation: https://github.com/OpenPrinting/cups-browsed/issues/36\n Participants are encouraged to explore OpenPrinting in general (https://github.com/OpenPrinting/) and propose their own ideas."
-    ,
-    techstack: ["C", "M4", "Shell", "Roff", "Makefile"
-    ],
-    github: "https://github.com/OpenPrinting/cups-browsed",
-    mentors: [
-      {
-        name: "Till Kamppeter",
-        socials: {
-          linkedin: "",
-          discord: "tillkamppeter",
-          email: "till.kamppeter@gmail.com",
-          twitter: "",
-        },
-      },
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-  {
-    name: "Fuzzing",
-    developer: "OpenPrinting",
-    desc: "Proposal Ideas:\n\nApply OSS-Fuzz to cups-browsed: https://github.com/OpenPrinting/fuzzing/issues/4\n Participants are encouraged to explore OpenPrinting in general (https://github.com/OpenPrinting/) and propose their own ideas."
-    ,
-    techstack: ["C", "C++", "Shell", "Makefile"
-    ],
-    github: "https://github.com/OpenPrinting/fuzzing",
-    mentors: [
-      {
-        name: "Till Kamppeter",
-        socials: {
-          linkedin: "",
-          discord: "tillkamppeter",
-          email: "till.kamppeter@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Jiongchi Yu",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "jiongchiyu@gmail.com",
-          twitter: "",
-        },
-      },
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-  {
-    name: "IPP-USB",
-    developer: "OpenPrinting",
-    desc: "Proposal Ideas:\n Create an OCI container image of ipp-usb: https://github.com/OpenPrinting/ipp-usb/issues/93\n Participants are encouraged to explore OpenPrinting in general (https://github.com/OpenPrinting/) and propose their own ideas."
-    ,
-    techstack: ["Go"
-    ],
-    github: "https://github.com/OpenPrinting/ipp-usb",
-    mentors: [
-      {
-        name: "Till Kamppeter",
-        socials: {
-          linkedin: "",
-          discord: "tillkamppeter",
-          email: "till.kamppeter@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Rudra Pratap Singh",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "rudransh.iitm@gmail.com",
+          email: "mdimad005@gmail.com",
           twitter: "",
         },
       },
@@ -801,146 +287,31 @@ const projectData: Project[] = [
       twitter: "",
     },
   },
-
   {
-    name: "API Dash",
-    developer: "API Dash",
-    desc: "API Dash is a beautiful open-source cross-platform (macOS, Windows, Linux, Android & iOS) API Client built using Flutter, designed to help you easily create & customize API requests, visually inspect responses and generate API integration code. It serves as a lightweight alternative to Postman/Insomnia.\n\nProblem Statement:\nContributors are welcome to add the following features to API Dash:\n- WebSocket support\n- SSE support\n- MQTT support\n- GraphQL support\n- gRPC support\n- Figuring out how to build for various Linux packaging formats\n- Importers for OpenAPI, Insomnia, Hurl, HAR\n- Embedded WebView in Response Previewer\n- Git Support\n- API Workflow Builder\n- OAuth 2.0 auth"
-    ,
-    techstack: ["Dart"
-    ],
-    github: "https://github.com/foss42/apidash",
+    name: "Redis Operator , K8s Vault Webhook , Logging Operator",
+    developer: "OpsTree Global",
+    desc: "1.Problem Statement -\nA golang based redis operator that will make/oversee Redis standalone/cluster/replication/sentinel mode setup on top of the Kubernetes.\n\nFocus Areas\nThe focus area will be backend controller development along with performance optimization.\nStudent Contribution Guide (Idea Page)\n• Backup & Restore CRD\n• Add a RedisBackup CR to trigger backups (e.g., using BGSAVE, snapshots, or RDB dumps).\n• Similarly, a RedisRestore CR to restore from snapshot.\n• Integrate with object storage (S3, GCS) for snapshot uploads.\n• Automated Certificate Management\n• Integrate with cert-manager to automate TLS certificates for Redis and Sentinel pods.\n• Support cert rotation.\n• Auto-Scaling\n• Add horizontal scaling logic: based on usage (memory, CPU, keyspace, throughput), operator can scale the number of replicas or shards.\n• Alternatively, integrate with Kubernetes Horizontal Pod Autoscaler (HPA) or a custom scaler.\n\n2. Problem Statement -\nk8s-vault-webhook is a Kubernetes admission webhook which listen for the events related to Kubernetes resources for injecting secret directly from secret manager to pod, secret, and configmap. The motive of creating this project is to provide a dynamic secret injection to containers/pods running inside Kubernetes from different secret managers for enhanced security.\nFocus Area -\nThe focus should be to stabilize the existing secret manager integrations, along with new feature support for secret manager.\nStudent Contribution Guide -\nSupport for more secret managers / backends: maybe add support for secret managers not yet supported, or improve existing ones.\n• Secrets versioning and rotation: introduce versioning of secrets, or periodic re-injection when secrets change in Vault.\n• Custom annotations or templating: allow more flexible templating for how secrets should be injected (e.g., naming conventions, path transformations).\n• RBAC / policy management UI or CRD: build a CRD or UI to manage which service accounts map to which Vault policies, instead of manual policy definitions.\n• Backup/reconciliation: maintain a reconciliation loop that ensures injected secrets remain up-to-date even after pod restarts, or if secret manager data changes.\n• Observability: expose metrics from the webhook (such as number of admission requests, failed injections, latency) via Prometheus.\n• Fault tolerance: handle cases when the secret manager is down, or when the webhook's certificate expires, more gracefully.\n\n3.Problem Statement -\nA golang based operator to create and manage EFK (Elasticsearch, Fluentd, and Kibana) stack on Kubernetes\nFocus Area -\n• Development of backend API features to support elasticsearch, fluentd, and kibana integration.\nStudent Contribution Guide -\n\nSupport for Alternative Log Collectors / Forwarders\n• Add support for Fluent Bit as a daemonset collector + Fluentd / ES / other outputs.\n(Although some upstream logging operators use Fluent Bit + Fluentd; if not present, this is big.)\n• Support for Loki as a storage backend (instead of or in addition to Elasticsearch) or other outputs (S3, Kafka, etc.).\n• Automatic Scaling & Lifecycle Management\n• Add CR-driven scaling for Elasticsearch nodes (master / data / ingestion) based on resource usage.\n• Implement lifecycle management of indices:\nrollover, retention, delete-old-index policies via CRD\n(or enhance existing index lifecycle CR).\n• Secure Multi-Tenancy / Namespacing\n• Build better namespace isolation of logging pipelines: allow CR per namespace, or per team, with RBAC.\n• Add validation / policy CRs to enforce which namespaces can write to which logging pipeline, or limit ES resources per tenant.\n• Observability Enhancements\n• Expose metrics from the operator: reconciliation time, number of CRs, failures, etc., via Prometheus.\n• Build Grafana dashboards for EFK stack health (ES metrics, Fluentd throughput, Kibana usage).",
+    techstack: ["GoLang", "Kubernetes"],
+    github: "https://github.com/OT-CONTAINER-KIT/redis-operator, https://github.com/OT-CONTAINER-KIT/k8s-vault-webhook, https://github.com/OT-CONTAINER-KIT/logging-operator",
     mentors: [
       {
-        name: "Ashita Prasad",
+        name: "Abhishek Dubey",
         socials: {
-          linkedin: "https://www.linkedin.com/in/ashitaprasad/",
-          discord: "",
-          email: "ashitaprasad.in@gmail.com",
+          linkedin: "https://www.linkedin.com/in/shubham-gupta-8b1168244/",
+          discord: "shubamgupta6536",
+          email: "iamshubhamgupta200@gmail.com",
           twitter: "",
         },
       },
       {
-        name: "Ankit Mahato",
+        name: "Samyak Jain",
         socials: {
-          linkedin: "https://www.linkedin.com/in/ankitmahato/",
-          discord: "",
-          email: "ankit@apidash.dev",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-  /*
-  {
-    name: "Awesome Open Source Flutter Apps",
-    developer: "Flutter Gems",
-    desc: "A curated list of awesome open source Flutter apps. Analyse open source Flutter apps and derive unique insights helpful for other developers.\n\nProblem Statement:\nContributors are welcome to add new open source Flutter apps and develop code to analyze the listed Flutter apps to derive insights such as package dependencies, project health, project activity, and more."
-  ,
-    techstack: [ "Dart"
-    ],
-    github: "https://github.com/fluttergems/awesome-open-source-flutter-apps",
-    mentors: [
-      {
-        name: "Ashita Prasad",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ashitaprasad/",
-          discord: "",
-          email: "ashitaprasad.in@gmail.com",
+          linkedin: "https://www.linkedin.com/in/samyyaakk",
+          discord: "samyyaakk",
+          email: "samyak.jain@opstree.com",
           twitter: "",
         },
       },
-      {
-        name: "Ankit Mahato",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ankitmahato/",
-          discord: "",
-          email: "ankit@apidash.dev",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  
-  
-  {
-    name: "Learn Python 3",
-    developer: "Ankit Mahato",
-    desc: "Free & Open Source book to master Python 3.\nProblem Statement:\nContributors are welcome to plan the next edition of the open-source Python Book, curate the existing contributions, and add new content to successfully release the next edition of the book."
-  ,
-    techstack: [ "Python"
-    ],
-    github: "https://github.com/animator/learn-python",
-    mentors: [
-      {
-        name: "Ashita Prasad",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ashitaprasad/",
-          discord: "",
-          email: "ashitaprasad.in@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Ankit Mahato",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ankitmahato/",
-          discord: "",
-          email: "ankit@apidash.dev",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  
-  //*/
-  {
-    name: "ChartDB",
-    developer: "ChartDB",
-    desc: "ChartDB is a powerful, web-based database diagramming editor. Instantly visualize your database schema with a single \"Smart Query.\" Customize diagrams, export SQL scripts, and access all features - no account required.\n\nProposal Ideas:\n\n1) Optimize the canvas to handle more tables by identifying and resolving performance bottlenecks incrementally, focusing on rendering, memory usage, and event handling.\n\n2) Add support for more databases - Snowflake, Oracle, ...\n\n3) Add a section to list database-related errors in diagrams (e.g., mismatched foreign key types).\n\nhttps://github.com/chartdb/chartdb/issues/485\n\n4) Optimize size & performance on SVG export.\n\nhttps://github.com/chartdb/chartdb/issues/375\n\n5) Improve flexibility and performance of the Docker setup.\n\nhttps://github.com/chartdb/chartdb/issues/428\n\n6) Add support custom types like enums.\n\nhttps://github.com/chartdb/chartdb/issues/475\n\n7) Add support for various export/import dialects.\n\nhttps://github.com/chartdb/chartdb/issues/383\n\nhttps://github.com/chartdb/chartdb/issues/72\n\n8) Extend field properties to include default values and size, ensuring these options are conditional based on the field type (e.g., size not applicable for integers).\n\n9) Bug Fixes: Contribute by fixing bugs labeled as \"good first issue\" to onboard new contributors."
-    ,
-    techstack: ["React", "Typescript", "CSS"
-    ],
-    github: "https://github.com/chartdb/chartdb",
-    mentors: [
-      {
-        name: "Jonathan Fishner",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/jonathanfishner/",
-          discord: "https://discord.gg/QeFwyWSKwC",
-          email: "jonathan@buckle.dev",
-          twitter: "",
-        },
-      },
-      {
-        name: "Guy Ben Aharon",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/guy-ben-aharon/",
-          discord: "https://discord.gg/QeFwyWSKwC",
-          email: "guybenah@gmail.com",
-          twitter: "",
-        },
-      }
     ],
     socials: {
       linkedin: "",
@@ -950,417 +321,63 @@ const projectData: Project[] = [
     },
   },
   {
-    name: "BrainPunk",
-    developer: "Ankit Mahato",
-    desc: "A Brain Story Game (Puzzles + Lore) built using Flutter + Flame.\nProblem Statement:\n  BrainPunk was a game project offering a refreshing take on puzzle games. Contributors are welcome to:\n- Improve the game storyline and interweave more exciting puzzles.\n- Generate AI art for each puzzle and the storyline.\n- Add responsive design.\n- Release the game on Android and Apple app stores."
-    ,
-    techstack: ["Dart", "HTML"
-    ],
-    github: "https://github.com/animator/brain_punk",
+    name: "WallGodds Web",
+    developer: "WallGodds",
+    desc: "A modern wallpaper website offering high-quality wallpapers for mobile, tablet, and desktop devices. Features include user uploads, categorization, and profile management.\n• Problem Statement: Many existing wallpaper platforms lack proper screen-size categorization and often overwhelm users with cluttered interfaces. WallGodds addresses this by offering a clean, minimal, and intuitive experience for browsing wallpapers across mobile, tablet, and desktop, while also allowing users to freely upload their own collections.\n\n• Focus Areas: UI/UX enhancement, performance optimization, and backend API development.\n\n• Student Contribution Guide (Idea Page): Contributors are encouraged to work on issues within our core focus areas or propose fresh, creative ideas. Collaboration with designers and developers is highly welcomed as we continue building a smoother, smarter, and more engaging platform together.",
+    techstack: ["React", "Firebase"],
+    github: "https://github.com/WallGodds/WallGodds-Web",
     mentors: [
       {
-        name: "Ashita Prasad",
+        name: "Parnab Bagchi",
         socials: {
-          linkedin: "https://www.linkedin.com/in/ashitaprasad/",
-          discord: "",
-          email: "ashitaprasad.in@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Ankit Mahato",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ankitmahato/",
-          discord: "",
-          email: "ankit@apidash.dev",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Mifos-Gazelle",
-    developer: "Mifos",
-    desc: "Proposal Idea:\n\nReview and update all pipelines and docker images to enable a build to run on ARM processors. This would be the first step to being able to deploy Mifos Gazelle on a Raspberry Pi-based lab.\n\nContributors are recommended to go through the \"README\" section on GitHub to have better understanding.",
-    techstack: ["Shell", "Dockerfile"
-    ],
-    github: "https://github.com/openMF/mifos-gazelle",
-    mentors: [
-      {
-        name: "Tom Daly",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/tom-daly-63b0a72/",
-          discord: "",
-          email: "tdaly@mifos.org",
-          twitter: "",
-        },
-      },
-      {
-        name: "David Higgins",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/david-higgins-b70a10/",
-          discord: "",
-          email: "dhiggins@mifos.org",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Mobile Wallet",
-    developer: "Mifos",
-    desc: "Mobile Wallet app built on top of the compose multi-platform.\nIn this Winter of Code, we are focusing on enabling AI-generated documentation and writing Unit and UI tests for end-to-end functionality on all platforms.\n\nProposal Ideas:\n-https://mifosforge.jira.com/browse/MW-161\n- https://mifosforge.jira.com/browse/MW-162"
-    ,
-    techstack: ["Shell", "Kotlin"
-    ],
-    github: "https://github.com/openMF/mobile-wallet",
-    mentors: [
-      {
-        name: "Rajan Maurya",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/therajanmaurya/",
-          discord: "therajanmaurya",
-          email: "rajanmaurya154@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Sk Niyaj Ali",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/skniyajali/",
-          discord: "",
-          email: "skniyajali0@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-  {
-    name: "Mifos-Mobile",
-    developer: "Mifos",
-    desc: "An Android Application built on top of the MifosX Self-Service platform for end-user customers to view/transact on the accounts and loans they hold. Data visible to customers will be a sub-set of what staff can see. This is a native Android Application written in Kotlin.\n\nProposal Ideas:\n-https://mifosforge.jira.com/browse/MM-92\n-https://mifosforge.jira.com/browse/MM-93\n-https://mifosforge.jira.com/browse/MM-94"
-    ,
-    techstack: ["Kotlin"
-    ],
-    github: "https://github.com/openMF/mifos-mobile",
-    mentors: [
-      {
-        name: "Rajan Maurya",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/therajanmaurya/",
-          discord: "therajanmaurya",
-          email: "rajanmaurya154@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Sk Niyaj Ali",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/skniyajali/",
-          discord: "",
-          email: "skniyajali0@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-
-
-
-  {
-    name: "Android-Client",
-    developer: "Mifos",
-    desc: "This Android application, built in Kotlin on the Mifos X platform, is designed for field officers to manage core banking operations. It facilitates transaction processing, client data management, group and center records, and account handling (loans, savings, recurring). It also enables generating client reports efficiently.\n\nProposal Ideas:\n-https://mifosforge.jira.com/browse/MIFOSAC-317\n-https://mifosforge.jira.com/browse/MIFOSAC-318",
-    techstack: ["Kotlin"
-    ],
-    github: "https://github.com/openMF/android-client",
-    mentors: [
-      {
-        name: "Rajan Maurya",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/therajanmaurya/",
-          discord: "therajanmaurya",
-          email: "rajanmaurya154@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Sk Niyaj Ali",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/skniyajali/",
-          discord: "",
-          email: "skniyajali0@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "DL-Simplified",
-    developer: "Abhishek Sharma",
-    desc: "Deep Learning Simplified is an open-source repository designed to guide contributors from beginner to advanced levels in deep learning. Whether you're just starting your journey or looking to sharpen your skills, this is the place for you.\n\nHere are some key points for contributors:\n\n1. Focus on Deep Learning Models: We encourage contributors to concentrate primarily on implementing deep learning models rather than basic machine learning models. Please review the issues section thoroughly, select one that matches your expertise, and propose your approach with various deep learning methods and models before requesting assignment.\n\n2. Explore OpenCV Implementations: Several issues in this repository involve OpenCV. Contributing to these will provide valuable hands-on experience and enhance your proficiency with OpenCV, which is a crucial skill for many deep learning tasks.\n\n3. NLP is a Key Area: We have several NLP-related issues that require attention. Be sure to fully understand the problem statements before diving into the implementation, and tailor your models to meet the requirements specified in each issue template."
-    ,
-    techstack: ["Python"
-    ],
-    github: "https://github.com/abhisheks008/DL-Simplified",
-    mentors: [
-      {
-        name: "Abhishek Sharma",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/abhishek-sharma-aa06a9183/",
-          discord: "",
-          email: "abhishek.opensource@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Suveda Kakarala",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/suveda-kakarala-626277290/",
-          discord: "",
-          email: "suveda999@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "Mixxx",
-    developer: "Mixxx",
-    desc: "Mixxx is a software that integrates the tools DJs need to perform creative live mixes with digital music files. Whether you are a new DJ with just a laptop or an experienced turntablist, Mixxx can support your style and techniques of mixing.\n\nProposal Ideas:\n\n1) Key Colors for Rate Slider:The Mixxx Rate Slider can change a track's key (when Keylock is off). This project will add color-coded hints along the slider to show the key the track will shift to at different slider positions.\n\n2) Key Tuning: Mixxx does not show tuning information of tracks, which makes harmonic mixing difficult in case of non 440 Hz tuning. The project will integrate a tuning detector and show tuning information in the library.\n\n3) Contributors are free to propose their own ideas\n\nFor more details visit:https://github.com/mixxxdj/mixxx/wiki/WOC"
-    ,
-    techstack: ["C++", "C", "JavaScript", "Shell"
-    ],
-    github: "https://github.com/mixxxdj/mixxx",
-    mentors: [
-      {
-        name: "Daniel Schürmann",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "daschuer@mixxx.org",
-          twitter: "",
-        },
-      },
-      {
-        name: "Daniel Fernandes",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/danferns/",
-          discord: "",
-          email: "dannywritescode@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "PortPy",
-    developer: "PortPy",
-    desc: "Proposal Ideas:\n\n1.Data Visualization:\n  1.1 Interactive Plot for Dose-Volume Histograms (DVH) Data\n  1.2 Animated Visualization of Multi-Leaf Collimator (MLC) Movements\n  1.3 Interactive Image Slice Navigation of CT Scan and Radiation Dose Map\n  1.4 User-Friendly Web Dashboard for PortPy Dataset Visualization\n\n2.Neural Network Model Development:\n  2.1 Implementing the Top 3 Neural Network Models of the 2020-OpenKBP Challenge in PortPy\n\n3.Optimization Algorithm:\n  3.1 Using Google's Jax.Opt to Solve PortPy Optimization Problems\n  3.2 Using SciPy.Optimize to Solve PortPy Optimization Problems\n  3.3 Python Implementation of Gradient Descent Algorithm for Solving PortPy Optimization Problems\n  3.4 Python Implementation of the ADMM Algorithm for PortPy Optimization Problems\n\n4.Creating a Documentation Website and Automated Unit Testing using GitOps CI/CD Features:\n  4.1 Creating a Documentation Website with GitOps CI/CD Features for PortPy\n  4.2 Creating Unit Tests with GitOps CI/CD Features for PortPy\n\nFor more detailed information visit:https://github.com/PortPy-Project/PortPy/blob/master/WOC/README.md\nTechStacks for each proposal are mentioned in above link"
-    ,
-    techstack: ["Python"
-    ],
-    github: "https://github.com/PortPy-Project/PortPy",
-    mentors: [
-      {
-        name: "Masoud Zarepisheh",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "zarepism@mskcc.org",
-          twitter: "",
-        },
-      }, {
-        name: "Gourav Jhanwar",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "JhanwarG@mskcc.org",
-          twitter: "",
-        },
-      }, {
-        name: "Mojtaba Tefagh",
-        socials: {
-          linkedin: "",
-          discord: "",
-          email: "m.tefagh@ed.ac.uk",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "HPX",
-    developer: "The STELLAR Group",
-    desc: "HPX is a C++ Standard Library for Concurrency and Parallelism. It implements all of the corresponding facilities as defined by the C++ Standard.\n\nProposal Ideas:\n\n Create HPX executor type that connects HPX to CUDA-Quantum"
-    ,
-    techstack: ["C++", "CMake", "Python", "Shell"
-    ],
-    github: "https://github.com/STEllAR-GROUP/hpx",
-    mentors: [
-      {
-        name: "Hartmut Kaiser",
-        socials: {
-          linkedin: "",
-          discord: "hkaiser",
-          email: "hartmut.kaiser@gmail.com",
-          twitter: "",
-        },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "WallGodds",
-    developer: "PARNAB BAGCHI",
-    desc: "PROPOSAL IDEAS:\n\nFor Beginners:  \n- Clear and guided issues like fixing UI bugs, updating documentation, or implementing simple features.  \n- A detailed CONTRIBUTING.md file to help first-timers navigate the process.\n\nFor Intermediate Contributors:  \n- Tasks such as developing reusable components, optimizing the backend, and enhancing the responsiveness of the UI.  \n\nFor Advanced Developers:  \n- Complex challenges like implementing scalable API endpoints, integrating authentication systems, or improving database efficiency.  \n- Tasks that push creativity, such as advanced animations or new user workflows.\n\nFor Designers:  \n- A dedicated DESIGN.md document to provide guidelines and vision.  \n- Access to our Figma file for creating and refining minimalistic, user-friendly layouts.  \n- A design initiative that helps foster collaboration among designers, offering a platform to showcase and implement their ideas."
-    ,
-    techstack: ["JavaScript", "HTML", "CSS", "Figma"
-    ],
-    github: "https://github.com/Parnab03/WallGodds",
-    mentors: [
-      {
-        name: "PARNAB BAGCHI",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/parnab-bagchi-072966251",
+          linkedin: "https://www.linkedin.com/in/parnab-bagchi-072966251/",
           discord: "Parnab_03",
           email: "pb7439578071@gmail.com",
           twitter: "",
         },
-      }, {
-        name: "SOUMIK GHOSH",
+      },
+      {
+        name: "Soumik Ghosh",
         socials: {
-          linkedin: "https://www.linkedin.com/in/soumik-ghosh-556651258/",
+          linkedin: "https://www.linkedin.com/in/parnab-bagchi-072966251/",
           discord: "soumikghosh_999",
           email: "soumikghosh09072004@gmail.com",
           twitter: "",
         },
-      }, {
-        name: "SHANKHADEEP PARIA",
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "WallGodds App",
+    developer: "WallGodds",
+    desc: "WallGodds is reimagined for mobile — fast, clean, and loaded with stunning high-res wallpapers for every screen. It's more than an app — it's your personal visual canvas, made for those who style their screen with every swipe.\n\n• Problem Statement: Applying wallpapers directly from the WallGodds website on mobile is often a long, repetitive process. Our goal is to simplify this through a dedicated mobile app that provides a seamless wallpaper experience while still allowing users to freely upload and share their own collections.\n\n• Focus Areas: UI/UX enhancement, performance optimization, and backend API development.\n\n• Student Contribution Guide (Idea Page): Contributors are encouraged to work on issues within our core focus areas or propose fresh, creative ideas. Collaboration with designers and developers is highly welcomed as we continue building a smoother, smarter, and more engaging platform together.",
+    techstack: ["Kotlin", "Compose", "Firebase"],
+    github: "https://github.com/WallGodds/WallGodds-App",
+    mentors: [
+      {
+        name: "Sayan Basak",
+        socials: {
+          linkedin: "https://www.linkedin.com/in/sayan-basak003/",
+          discord: "cyanb",
+          email: "sayanbasak42@gmail.com",
+          twitter: "",
+        },
+      },
+      {
+        name: "Shankhadeep Paria",
         socials: {
           linkedin: "https://www.linkedin.com/in/shankhadeepparia/",
           discord: "shankyy69",
           email: "pariashankhadeep@gmail.com",
           twitter: "",
         },
-      }
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "APIsh",
-    developer: "Nikhil Chopra",
-    desc: "APIsh is a decentralized API marketplace that allows developers to publish APIs and users to access them via blockchain-based micropayments. This project aims to streamline the process of API integration and usage while ensuring secure and efficient transactions.\n\nProposal Ideas:\nAdding user metrics , improvement of pre-built chatbot templates\nContributors are free to explore and propose their own idea."
-    ,
-    techstack: ["Typescript"
-    ],
-    github: "https://github.com/nikhilchopra08/apish",
-    mentors: [
-      {
-        name: "Ansh Garg",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/ansh-garg-777ab7258/",
-          discord: "NikhilChopra",
-          email: "anshgarg030404@gmail.com",
-          twitter: "",
-        },
-      }, {
-        name: "Varun Jaiswal",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/varun-jaiswal-19581726b/",
-          discord: "dinosaur8861",
-          email: "varunjaiswalvv@gmail.com",
-          twitter: "",
-        },
-      }
-
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
-  {
-    name: "Retro",
-    developer: "Lakshmi Pavananjali",
-    desc: "RETRO is an online platform celebrating vintage aesthetics and timeless designs. It blends classic styles with modern usability, offering information on vintage collections and enabling users to place orders. RETRO provides a sophisticated experience where nostalgia meets innovation, bringing the charm of the past to life.\n\nContributors are free to explore and propose their own idea."
-    ,
-    techstack: ["Python", "Javascript", "CSS", "HTML"
-    ],
-    github: "https://github.com/Anjaliavv51/Retro",
-    mentors: [
-      {
-        name: "Pamidi Lakshmi Pavananjali",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/lakshmi-pavananjali-pamidi-766760296",
-          discord: "",
-          email: "plpanjali05@gmail.com",
-          twitter: "",
-        },
-      }
+      },
     ],
     socials: {
       linkedin: "",
@@ -1370,6 +387,7 @@ const projectData: Project[] = [
     },
   },
 ];
+
 
 const asset = {
 
