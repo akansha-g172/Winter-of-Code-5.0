@@ -236,57 +236,57 @@ const projectData: Project[] = [
   //     twitter: "",
   //   },
   // },
-  {
-    name: "Complete CI testing for OpenPrinting projects",
-    developer: "OpenPrinting",
-    desc: "Problem Statements:- 1.As the software components we develop at OpenPrinting are an essential part of the operating system infrastructure, we want to have a solid CI testing of each commit to our GitHub repositories. CUPS (\"cups\" repository for 2.x) has already excellent CI done by Michael Sweet, consisting of GitHub actions/workflows which automatically apply static analysers, build and execution tests on different architectures and distros, … This we want to have also in the other projects on OpenPrinting.    2.The go-avahi project provides Go bindings for the Avahi/mDNS/DNS-SD stack and is used for network service discovery functionality within the OpenPrinting ecosystem. It acts as a bridge between Go applications and the underlying Avahi daemon through D-Bus.\n\nCurrently, go-avahi has no fuzz testing, limited test coverage, and several input-handling paths may fail in unexpected ways for malformed or adversarial input. For this project,, fuzzing is especially important to uncover crashes, panics, and edge cases.\n\nThis project aims to develop a comprehensive fuzzing setup for go-avahi, improve test coverage, and integrate the project into the OSS-Fuzz ecosystem to enable continuous, long-term fuzz testing.   3.Currently, the go-mfp project, aimed to implement a full-featured behaviour-accurate MFP simulator together with collection of the MFP testing/validation/troubleshooting tools, lacks the support of WS-Scan protocol. We already have eSCL, partially implemented IPP, virtual USB MFP simulation (IPP over USB and legacy 7/1/1 USB printer), but WS-Scan support is not yet completed.\n4.Currently, the go-mfp simulator already has very basic support of the legacy USB 7/1/1 printer emulation. However, it doesn't somehow interpret the data sent to the emulated printer and doesn't provide any response (as 7/1/2 devices should do).\n\nThe project goal is to implement the Go io.Reader (for 7/1/1 devices) and Go io.ReadWriter that consumes raw data bytes, sent to the emulated printer and able to properly identify document format being sent (i.e., PostScript, PDF, PCL5, ESC/P, …) and based on that identification properly detect the document or page boundaries (for example, PostScript and PDF documents are terminated by the Ctrl-D character, ESC/P and PCL5 may use end-of-page character etc).\n\nHaving that implemented we can add saving documents to file for further analysis and troubleshooting and document rendering for printed image evaluation.\n\nAlso, the bidirectional (USB 7/1/2) printers implement a simple PJL interpreter and generate proper responses, which also needs to be implemented in the io.ReadWriter interface with functionality enough to make CUPS happy.\n5.The contributor should study how the legacy printer works, how the graphical documents are sent to the printer and how the printer recognizes that document transmission is finished. The printed documents need to be extracted from the unstructured host to printer data flow and passed separately to the upper layer, which will decide what to do with these documents (just to save to the log file, to render etc).\n\nRendering of printed documents is out of the scope of this project, so very detailed understanding of the relevant formats is not required.\n\nAlso, for the implementation of the bidirectional (USB 7/1/2) printers the contributor needs to understand the behaviour expectations, based on specifications and CUPS implementation and to write a simple simulator.\n\nThe representation of the emulated printer as a virtual USB device already done in the go-mfp and out of scope of this project. At this level the contributor needs only to implement the Go io.Reader and io.ReadWriter interfaces that can properly consume the data sent to the printer and to generate the proper response, the task of transporting this data from/to the host is out of scope of this project (and already solved at the first glance).\n\nAs result of this project, the code contribution into the go-mfp is expected, with the reasonable test coverage and integration with the \"big project\".",
-    techstack: ["C", "Shell", "GIT", "Github actions", "Static analysers"],
-    github: "https://github.com/OpenPrinting/libcupsfilters, https://github.com/OpenPrinting/cups-filters, https://github.com/OpenPrinting/cpdb-libs, https://github.com/OpenPrinting/cpdb-backend-cups, https://github.com/OpenPrinting/cups-snap, https://github.com/OpenPrinting/libppd, https://github.com/OpenPrinting/pappl-retrofit",
-    mentors: [
-      {
-        name: "Till Kamppeter",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/kamppetertill/",
-          discord: "tillkamppeter",
-          email: "till.kamppeter@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Alexander Pevzner",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/alexander-pevzner-6046161/",
-          discord: "",
-          email: "pzz@apevzner.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Uddhav Phatak",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/uddhavphatak",
-          discord: "",
-          email: "uddhavphatak@gmail.com",
-          twitter: "",
-        },
-      },
-      {
-        name: "Mohammed Imaduddin",
-        socials: {
-          linkedin: "https://www.linkedin.com/in/mdimado/",
-          discord: "",
-          email: "mdimad005@gmail.com",
-          twitter: "",
-        },
-      },
-    ],
-    socials: {
-      linkedin: "",
-      discord: "",
-      email: "",
-      twitter: "",
-    },
-  },
+  // {
+  //   name: "Complete CI testing for OpenPrinting projects",
+  //   developer: "OpenPrinting",
+  //   desc: "Problem Statements:- 1.As the software components we develop at OpenPrinting are an essential part of the operating system infrastructure, we want to have a solid CI testing of each commit to our GitHub repositories. CUPS (\"cups\" repository for 2.x) has already excellent CI done by Michael Sweet, consisting of GitHub actions/workflows which automatically apply static analysers, build and execution tests on different architectures and distros, … This we want to have also in the other projects on OpenPrinting.    2.The go-avahi project provides Go bindings for the Avahi/mDNS/DNS-SD stack and is used for network service discovery functionality within the OpenPrinting ecosystem. It acts as a bridge between Go applications and the underlying Avahi daemon through D-Bus.\n\nCurrently, go-avahi has no fuzz testing, limited test coverage, and several input-handling paths may fail in unexpected ways for malformed or adversarial input. For this project,, fuzzing is especially important to uncover crashes, panics, and edge cases.\n\nThis project aims to develop a comprehensive fuzzing setup for go-avahi, improve test coverage, and integrate the project into the OSS-Fuzz ecosystem to enable continuous, long-term fuzz testing.   3.Currently, the go-mfp project, aimed to implement a full-featured behaviour-accurate MFP simulator together with collection of the MFP testing/validation/troubleshooting tools, lacks the support of WS-Scan protocol. We already have eSCL, partially implemented IPP, virtual USB MFP simulation (IPP over USB and legacy 7/1/1 USB printer), but WS-Scan support is not yet completed.\n4.Currently, the go-mfp simulator already has very basic support of the legacy USB 7/1/1 printer emulation. However, it doesn't somehow interpret the data sent to the emulated printer and doesn't provide any response (as 7/1/2 devices should do).\n\nThe project goal is to implement the Go io.Reader (for 7/1/1 devices) and Go io.ReadWriter that consumes raw data bytes, sent to the emulated printer and able to properly identify document format being sent (i.e., PostScript, PDF, PCL5, ESC/P, …) and based on that identification properly detect the document or page boundaries (for example, PostScript and PDF documents are terminated by the Ctrl-D character, ESC/P and PCL5 may use end-of-page character etc).\n\nHaving that implemented we can add saving documents to file for further analysis and troubleshooting and document rendering for printed image evaluation.\n\nAlso, the bidirectional (USB 7/1/2) printers implement a simple PJL interpreter and generate proper responses, which also needs to be implemented in the io.ReadWriter interface with functionality enough to make CUPS happy.\n5.The contributor should study how the legacy printer works, how the graphical documents are sent to the printer and how the printer recognizes that document transmission is finished. The printed documents need to be extracted from the unstructured host to printer data flow and passed separately to the upper layer, which will decide what to do with these documents (just to save to the log file, to render etc).\n\nRendering of printed documents is out of the scope of this project, so very detailed understanding of the relevant formats is not required.\n\nAlso, for the implementation of the bidirectional (USB 7/1/2) printers the contributor needs to understand the behaviour expectations, based on specifications and CUPS implementation and to write a simple simulator.\n\nThe representation of the emulated printer as a virtual USB device already done in the go-mfp and out of scope of this project. At this level the contributor needs only to implement the Go io.Reader and io.ReadWriter interfaces that can properly consume the data sent to the printer and to generate the proper response, the task of transporting this data from/to the host is out of scope of this project (and already solved at the first glance).\n\nAs result of this project, the code contribution into the go-mfp is expected, with the reasonable test coverage and integration with the \"big project\".",
+  //   techstack: ["C", "Shell", "GIT", "Github actions", "Static analysers"],
+  //   github: "https://github.com/OpenPrinting/libcupsfilters, https://github.com/OpenPrinting/cups-filters, https://github.com/OpenPrinting/cpdb-libs, https://github.com/OpenPrinting/cpdb-backend-cups, https://github.com/OpenPrinting/cups-snap, https://github.com/OpenPrinting/libppd, https://github.com/OpenPrinting/pappl-retrofit",
+  //   mentors: [
+  //     {
+  //       name: "Till Kamppeter",
+  //       socials: {
+  //         linkedin: "https://www.linkedin.com/in/kamppetertill/",
+  //         discord: "tillkamppeter",
+  //         email: "till.kamppeter@gmail.com",
+  //         twitter: "",
+  //       },
+  //     },
+  //     {
+  //       name: "Alexander Pevzner",
+  //       socials: {
+  //         linkedin: "https://www.linkedin.com/in/alexander-pevzner-6046161/",
+  //         discord: "",
+  //         email: "pzz@apevzner.com",
+  //         twitter: "",
+  //       },
+  //     },
+  //     {
+  //       name: "Uddhav Phatak",
+  //       socials: {
+  //         linkedin: "https://www.linkedin.com/in/uddhavphatak",
+  //         discord: "",
+  //         email: "uddhavphatak@gmail.com",
+  //         twitter: "",
+  //       },
+  //     },
+  //     {
+  //       name: "Mohammed Imaduddin",
+  //       socials: {
+  //         linkedin: "https://www.linkedin.com/in/mdimado/",
+  //         discord: "",
+  //         email: "mdimad005@gmail.com",
+  //         twitter: "",
+  //       },
+  //     },
+  //   ],
+  //   socials: {
+  //     linkedin: "",
+  //     discord: "",
+  //     email: "",
+  //     twitter: "",
+  //   },
+  // },
   // {
   //   name: "Redis Operator , K8s Vault Webhook , Logging Operator",
   //   developer: "OpsTree Global",
@@ -376,6 +376,141 @@ const projectData: Project[] = [
           discord: "shankyy69",
           email: "pariashankhadeep@gmail.com",
           twitter: "",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "GBasis: Arbitrary-order Overlap Integrals",
+    developer: "QC-Devs",
+    desc: "Problem Statement/Description\n\nAdd functionality to the GBasis library for arbitrary-order overlaps. One motivation of this is to support the evaluation of the intracule (the distribution function for the interelectronic distance) and the extracule (the distribution function for the center-of-mass of electron pairs).\n\nWhat will you do?\n\nYour main focus will be to add functionality for the overlaps of arbitrarily many Gaussian basis functions. It is important to include screening, as otherwise the evaluations can be quite expensive. An important application, which should be supported with an appropriate API, is evaluation of the intracule and extracule. This is possible because, using tricks popularized by Beylkin and Monzon, almost any interparticle repulsion can be written as a sum of Gaussians. This would include the (many-body) interactions associated with nucleons and other types of codeensors and cohesors. This is a place where some creativity can be exercised, as innovative new algorithms and improved fits are being consistently proposed.\n\nFocus Areas\n• Implementation and testing of numerical algorithms.\n• Development of API (porcelain) to support the use of the new functionality.\n• Writing documentation and tutorial notebooks.\n\nExpected Outcomes\n1. Implement the overlap for an arbitrary number of (contracted, Cartesian or spherical) Gaussian basis functions.\n2. Add support for screening, with appropriate default parameters.\n3. Add functionality for evaluating the intracule and extracule.\n4. Utilities for computing positive integer powers of the electron density and relevant density matrices.\n5. Support for (near) arbitrary interparticle repulsion integrals. This uses the aforementioned trick of Beylkin and Monzon.\n6. Write comprehensive tests and documentation for all new functionality.\n7. Write tutorial Jupyter notebooks that show how to use the new functionality.",
+    techstack: ["Python", "GitHub Actions", "Object-oriented programming"],
+    github: "https://github.com/theochem/gbasis",
+    mentors: [
+      {
+        name: "Marco Martinez-Gonzalez",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "mmq870630_at_gmail_dot_com",
+          twitter: "marco-2023",
+        },
+      },
+      {
+        name: "Farnaz Heidar-Zadeh",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "farnaz_dot_heidarzadeh_at_queensu_dot_ca",
+          twitter: "FarnazH",
+        },
+      },
+      {
+        name: "Esteban Vöhringer-Martinez",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "estebanvohringer_at_qcmlab_dot_com",
+          twitter: "evohringer",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "Better Linking Between libcint with GBasis",
+    developer: "QC-Devs",
+    desc: "Project Statement/Description\n\nGBasis uses libcint as a back end for efficient integral evaluation. Unfortunately, the default installation of GBasis (with PyPI) doesn't include libcint, and installation from source is not easy for some users. The primary goal of this project is to fix this. The secondary, subsidiary, goal is to provide better support for the very rich set of integrals that libcint supports.\n\nWhat will you do?\n\nYour main focus will be to prepare a release of GBasis that includes libcint for PyPI. We want to support Windows, Linux, and Mac. Note that when we say libcint this includes libcint (generic C++ library) and its high-performance variant pyscf, for hardware platforms that support it. There might be multiple ways to do this, using, for example, Meson. We are agnostic as to the way it is done, but we note that (a) compiling libcint can be hairy and (b) we want an automated workflow so that updating GBasis is easy and new versions of libcint are easily supported.\n\nFocus Areas\n• DevOps automatic building, testing, and releasing of Python packages with compiled back ends.\n• Development of API (porcelain) to support the use of the additional integrals from libcint.\n• Writing documentation and tutorial notebooks.\n\nExpected Outcomes\n1. It becomes possible to pip install GBasis with the libcint integral engine.\n2. More (most?) of the integrals in libcint are accessible from GBasis. (This is basically wrapping more integrals. It isn't always trivial. #149)\n3. Write comprehensive tests and documentation for all new functionality.\n4. Write tutorial Jupyter notebooks that show how to use the new functionality.",
+    techstack: ["C++", "Python", "OOP", "DevOps"],
+    github: "https://github.com/theochem/gbasis",
+    mentors: [
+      {
+        name: "Marco Martinez-Gonzalez",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "mmq870630_at_gmail_dot_com",
+          twitter: "marco-2023",
+        },
+      },
+      {
+        name: "Michelle Richer",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "michellericher93_at_gmail_dot_com",
+          twitter: "msricher",
+        },
+      },
+      {
+        name: "Toon Verstraelen",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "toon_dot_verstraelen_at_ugent_dot_be",
+          twitter: "tovrstra",
+        },
+      },
+      {
+        name: "Paul Ayers",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "ayers_at_mcmaster_dot_ca",
+          twitter: "PaulWAyers",
+        },
+      },
+    ],
+    socials: {
+      linkedin: "",
+      discord: "",
+      email: "",
+      twitter: "",
+    },
+  },
+  {
+    name: "GBasis: 2-electron integrals - better performance and more flexibility",
+    developer: "QC-Devs",
+    desc: "Problem Statement/Description\n\nAdd functionality to the GBasis library for evaluating 2-electron integrals, including non-Coulomb repulsions. The current Python implementation is very slow, but it also uses a very inefficient algorithm. A more efficient algorithm, combining the Obara-Saika and Head-Gordon-Pople recurrences, would fix this issue. One advantage of having this coded in (pure) Python is that it makes it easy to explore new screening methods, exploit sparsity, and include unconventional integrals (e.g., screened Coulomb interactions). Here is a good introduction to Gaussian integral evaluation, which can help you get your bearings without overwhelming you with (important!!) details.\n\nWhat will you do?\n\nYour main focus will be to (re)implement the 2-electron integrals in GBasis using the algorithm in the notes. This is important partly because it seems we may have a bug in the integrals for high angular momentum (cf. #216) and because the current implementation is painfully slow. It is very helpful for many people to have a pure Python implementation of the 2-electron integrals because, while it will always be (relatively) slow, it allows more flexibility for development of new algorithms and facilitates cross platform code interoperability. In addition, in many cases integral evaluation is not the performance bottleneck.\n\nThe key steps will be to: 1. Understand the recursive evaluation of Gaussian integrals. 2. Implement the key recurrences. (vertical, horizontal, electron-transfer) 3. Apply those recurrences in sequence to evaluate the 2-electron integrals. 4. Write functions for different \"initializations\" of the Boys function to support different types of 2-electron integrals.\n\nFocus Areas\n• Implementation and testing of numerical algorithms.\n• Development of API (porcelain) to support the use of the new functionality.\n• Writing documentation and tutorial notebooks.\n\nExpected Outcomes\n1. Implement the recursive evaluation of 2-electron integrals into GBasis using the algorithm in the notes. This requires implementing several different recurrences, which are the \"building blocks\" for the algorithm as a whole.\n2. Implement several different \"generalized Boys functions\" so that multiple types of 2-electron integrals are supported.\n3. Write comprehensive tests and documentation for all new functionality.\n4. Write tutorial Jupyter notebooks that show how to use the new functionality.",
+    techstack: ["Python", "OOP"],
+    github: "https://github.com/theochem/gbasis",
+    mentors: [
+      {
+        name: "Paul Ayers",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "ayers_at_mcmaster_dot_ca",
+          twitter: "PaulWAyers",
+        },
+      },
+      {
+        name: "Marco Martinez-Gonzalez",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "mmq870630_at_gmail_dot_com",
+          twitter: "marco-2023",
+        },
+      },
+      {
+        name: "Fanwang Meng",
+        socials: {
+          linkedin: "",
+          discord: "",
+          email: "fanwang_dot_meng_at_queensu_dot_ca",
+          twitter: "FanwangM",
         },
       },
     ],
