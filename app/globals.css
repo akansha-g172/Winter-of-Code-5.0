@@ -351,3 +351,26 @@ hr {
 .close-button-glow:hover {
   box-shadow: 0 0 20px rgba(139, 127, 255, 0.6), 0 0 30px rgba(96, 156, 255, 0.4);
 }
+
+/* Project title marquee animation on hover */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.project-title-container {
+  overflow: hidden;
+}
+
+.project-title-text {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.project-card-wrapper:hover .project-title-text.overflow-text {
+  animation: marqueeScroll 5s linear infinite;
+}
