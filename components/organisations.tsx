@@ -1,60 +1,12 @@
 import Image from 'next/image'
 import asset1 from '../public/org.svg'
+import organisations from "../data/organisations.json";
 
 interface Org {
     name: string;
     website: string;
 }
-const orgsData: Org[] = [
-    {
-        name: "OWASP Nest",
-        website: "https://owasp.org/"
-    },
-    {
-        name: "OpenPrinting",
-        website: "https://www.openprinting.org/"
-    },
-    {
-        name: "QC Devs",
-        website: "https://qcdevs.org"
-    },
-    {
-        name: "MIXXX",
-        website: "https://mixxx.org/"
-    },
-    {
-        name: "Open World Holidays Framework",
-        website: "https://github.com/vacanza/"
-    },
-    {
-        name: "OpsTree Global",
-        website: "https://opstree.com/"
-    },
-    {
-        name: "PerformanC",
-        website: ""
-    },
-    {
-        name: "Development Society AEC",
-        website: "https://devsoc-aec.vercel.app/"
-    },
-    {
-        name: "FOSSIA",
-        website: "https://fossia.org"
-    },
-    {
-        name: "Open Source Chandigarh",
-        website: ""
-    },
-    {
-        name: "Cooketh Org",
-        website: "https://cookethcompany.xyz/"
-    },
-    {
-        name: "WallGodds",
-        website: "https://www.linkedin.com/company/wallgodds"
-    },
-];
+const orgsData: Org[] = organisations;
 
 const OrgCard = ({ org }: { org: Org }) => {
     return (

@@ -1,117 +1,13 @@
 import Image from 'next/image'
 import partnercard from '../public/partner.svg'
+import cps from "../data/partners.json";
 
 interface Partner {
     name: string;
     link: string;
 }
 
-const partnerData: Partner[] = [
-    {
-        name: "IIITians Network",
-        link: "https://www.linkedin.com/company/iiitians-network/"
-    },
-    {
-        name: "Apertre",
-        link: "https://www.linkedin.com/showcase/apertre25/"
-    },
-    {
-        name: "DevDotCom",
-        link: "https://www.linkedin.com/company/devdotcom/"
-    },
-    {
-        name: "Open Source Chandigarh",
-        link: "https://www.linkedin.com/company/open-source-chandigarh"
-    },
-    {
-        name: "Noobuild",
-        link: "https://www.linkedin.com/company/noobuild/"
-    },
-    {
-        name: "Scroll Connect",
-        link: "https://www.linkedin.com/company/scrollconnect"
-    },
-    {
-        name: "AITD-EVENTS",
-        link: "https://www.linkedin.com/in/aitd-events/"
-    },
-    {
-        name: "Sourcify IN",
-        link: "https://www.linkedin.com/company/sourcifyin/"
-    },
-    {
-        name: "Magistics",
-        link: "https://www.linkedin.com/company/magistics/"
-    },
-    {
-        name: "ByteBrigade",
-        link: "https://www.linkedin.com/company/byte-brigade2025/"
-    },
-    {
-        name: "rootsprout",
-        link: "https://www.linkedin.com/company/rootsprout/"
-    },
-    {
-        name: "CU Updates",
-        link: "https://www.linkedin.com/company/cu-updates/"
-    },
-    {
-        name: "Codesapiens",
-        link: "https://www.linkedin.com/company/codesapiens-community/"
-    },
-    {
-        name: "WallGodds",
-        link: "https://www.linkedin.com/company/wallgodds"
-    },
-    {
-        name: "LastMinuteEngineering",
-        link: "https://www.linkedin.com/company/lastminuteengineering/"
-    },
-    {
-        name: "GDG on Campus IEM",
-        link: "https://www.linkedin.com/company/gdsciem"
-    },
-    {
-        name: "GDG on Campus VIT",
-        link: "https://www.linkedin.com/company/google-developer-groups-vit-mumbai"
-    },
-    {
-        name: "GDG on Campus BCREC",
-        link: "https://www.linkedin.com/company/gdsc-bcrec"
-    },
-    {
-        name: "GDG on Campus GCECT",
-        link: "https://www.linkedin.com/company/google-developer-groups-on-campus-gcect"
-    },
-    {
-        name: "GDG on Campus AOT",
-        link: "https://www.linkedin.com/company/gdgocaot/"
-    },
-    {
-        name: "GDG on Campus JIS",
-        link: "https://www.linkedin.com/company/dscjisu/"
-    },
-    {
-        name: "GDG on Campus MCKV",
-        link: "https://www.linkedin.com/company/gdg-on-campus-mckv-institute-of-engineering-howrah-india"
-    },
-    {
-        name: "GDG on Campus IIE",
-        link: "https://www.linkedin.com/company/gdgc-iie"
-    },
-    {
-        name: "GDG on Campus CIT",
-        link: "https://www.linkedin.com/company/gdg-on-campus-coimbatore-institute-of-technology/"
-    },
-    {
-        name: "GDG on Campus MUJ",
-        link: "https://www.instagram.com/gdgcmuj/"
-    },
-    {
-        name: "GDG on Campus TMS",
-        link: "https://www.linkedin.com/company/gdg-oncampus-techno-main-salt-lake/"
-    },
-];
+const partnerData: Partner[] = cps
 
 const PartnerCard = ({ partner }: { partner: Partner }) => {
     const isLarge = partner.name === 'rootsprout' || partner.name === 'ByteBrigade';
