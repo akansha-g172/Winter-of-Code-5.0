@@ -103,6 +103,14 @@ const partnerData: Partner[] = [
         name: "GDG on Campus CIT",
         link: "https://www.linkedin.com/company/gdg-on-campus-coimbatore-institute-of-technology/"
     },
+    {
+        name: "GDG on Campus MUJ",
+        link: "https://www.instagram.com/gdgcmuj/"
+    },
+    {
+        name: "GDG on Campus TMS",
+        link: "https://www.linkedin.com/company/gdg-oncampus-techno-main-salt-lake/"
+    },
 ];
 
 const PartnerCard = ({ partner }: { partner: Partner }) => {
