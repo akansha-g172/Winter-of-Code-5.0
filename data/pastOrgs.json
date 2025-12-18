@@ -94,5 +94,179 @@
         "link": "https://stellar-group.org/",
         "image": "TheStellarGroup.webp",
         "version": "4"
+    },
+    {
+        "name": "Async API",
+        "link": "",
+        "image": "asyncAPI.png",
+        "version": "3"
+    },
+    {
+        "name": "Devscript",
+        "link": "",
+        "image": "devscript.png",
+        "version": "3"
+    },
+    {
+        "name": "G Develop",
+        "link": "",
+        "image": "GDevelop.png",
+        "version": "3"
+    },
+    {
+        "name": "EduHub",
+        "link": "",
+        "image": "eduhub.png",
+        "version": "3"
+    },
+    {
+        "name": "Gita Init",
+        "link": "",
+        "image": "gitaInit.png",
+        "version": "3"
+    },
+    {
+        "name": "HFC",
+        "link": "",
+        "image": "hfc.png",
+        "version": "3"
+    },
+    {
+        "name": "Moja Global",
+        "link": "",
+        "image": "mojaGlobal.png",
+        "version": "3"
+    },
+    {
+        "name": "Open CY",
+        "link": "",
+        "image": "openCY.png",
+        "version": "3"
+    },
+    {
+        "name": "Open EMR",
+        "link": "",
+        "image": "openemr.png",
+        "version": "3"
+    },
+    {
+        "name": "Org A",
+        "link": "",
+        "image": "orgA.png",
+        "version": "3"
+    },
+    {
+        "name": "Polyaxon",
+        "link": "",
+        "image": "polyaxon.png",
+        "version": "3"
+    },
+    {
+        "name": "SamagraX",
+        "link": "",
+        "image": "samagraX.png",
+        "version": "3"
+    },
+    {
+        "name": "Styava",
+        "link": "",
+        "image": "styava.png",
+        "version": "3"
+    },
+    {
+        "name": "Terra Forge 3D",
+        "link": "",
+        "image": "terra.png",
+        "version": "3"
+    },
+    {
+        "name": "Google Developer Student Clubs",
+        "link": "",
+        "image": "gdsc.png",
+        "version": "3"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
+    },
+    {
+        "name": "",
+        "link": "",
+        "image": "",
+        "version": "1"
     }
 ]
