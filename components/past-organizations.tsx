@@ -57,7 +57,7 @@ const PastStatCard = ({ stats }: { stats: PastStats }) => {
             </div>
 
             <div className="absolute left-[50%] -translate-x-[50%] top-[28%] w-[65%] h-[55%] text-grey justify-center items-center flex overflow-hidden font-kleemax">
-              <p className='text-2xl'>{stats.data}</p>
+              <p className='text-xs sm:text-lg md:text-xl lg:text-2xl'>{stats.data}</p>
             </div>
         </div>
     );

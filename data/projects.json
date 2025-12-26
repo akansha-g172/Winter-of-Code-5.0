@@ -1062,7 +1062,7 @@
   },
   {
     "name": "Exsh",
-    "developer": "",
+    "developer": "RootSprout",
     "desc": "Focus Area:\n- Students can learn built from scratch implementations.\n- Everything is built in low level language (C), no abstraction.",
     "techstack": ["C"],
     "github": "https://github.com/RootSprout/Exsh",
@@ -1095,7 +1095,7 @@
   },
   {
     "name": "CTP - A Serial datalink transport protocol",
-    "developer": "",
+    "developer": "RootSprout",
     "desc": "Focus Area:\n- Students can learn built from scratch implementations.\n- Everything is built in low level language (C), no abstraction.",
     "techstack": ["C"],
     "github": "https://github.com/RootSprout/CTP",
@@ -1128,7 +1128,7 @@
   },
   {
     "name": "Kira-Kafka",
-    "developer": "",
+    "developer": "RootSprout",
     "desc": "Focus Area:\n- Students can learn built from scratch implementations.\n- Everything is built in low level language (C), no abstraction.",
     "techstack": ["C"],
     "github": "https://github.com/RootSprout/Kira-Kafka",
@@ -1161,7 +1161,7 @@
   },
   {
     "name": "AMRIT",
-    "developer": "",
+    "developer": "PSMRI",
     "desc": "Any proposal guidelines, ideas, or focus areas for students.\nAMRIT is an EHR platform. Students will get exposure to healthcare domain and technology that powers grass root level operations in different parts of India. We will file issues under the GitHub issues section. Let me know if there is any template for filing these issues.",
     "techstack": ["TypeScript",  "Java",  "JavaScript", "Python",  "Kotlin"],
     "github": "https://github.com/PSMRI/AMRIT/",
@@ -1185,7 +1185,7 @@
   },
   {
     "name": "Keploy Blog Website",
-    "developer": "",
+    "developer": "Keploy",
     "desc": "● Problem Statement\nWe’re looking to improve the current Keploy blog website. There are several issues already listed in the Keploy repository, please pick one and start working on it. You’re also encouraged to create new issues by taking inspiration from other blog websites and suggesting improvements. The end goal is to enhance the blog website in terms of both UI and performance.\n\n● Focus Areas\nExample: backend API development, UI/UX improvements, documentation, performance optimization, devops.\n\n● Student Contribution Guide (Idea Page)\nFirst, please visit our repository and pick an issue to work on from the list below:\n\nIssues:\nhttps://github.com/keploy/keploy/issues?q=is%3Aissue%20state%3Aopen%20label%3Ablog-website\n\n● You’re also welcome to create a new issue if you have ideas or improvements you’d like to work on.\n\nNote: Please attach a short video of your changes so mentors can review them easily and share feedback quickly.",
     "techstack": ["TypeScript",  "JavaScript", "Wordpress"],
     "github": "https://github.com/keploy/blog-website",
