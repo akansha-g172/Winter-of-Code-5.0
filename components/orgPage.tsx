@@ -3,8 +3,10 @@ import JumbleText from '@/components/jumble'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { IoChatbox } from "react-icons/io5";
+import { IoChatbox, IoBookOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { MdCenterFocusStrong } from "react-icons/md";
 import asset1 from '../public/org.svg'
 import partnercard from '../public/partner.svg'
 import projectbanner from "../public/projectbanner.svg";
@@ -20,8 +22,10 @@ type Project = {
     title: string
     description: string
     tech: string[]
-    difficulty: 'beginner' | 'intermediate' | 'advanced'
-    ideaLink?: string
+    problemStatement?: string
+    focusArea?: string
+    contributionGuide?: string
+    githubLink?: string
 }
 
 type Contact = {
@@ -71,28 +75,38 @@ const org: Org = {
     ],
     mentors: [
         { name: 'Alex Rivera', role: 'Lead Maintainer', handle: '@alex-r', profile: 'https://github.com/alex-r' },
+        { name: 'Alex Rivera', role: 'Lead Maintainer', handle: '@alex-r', profile: 'https://github.com/alex-r' },
+        { name: 'Priya Verma', role: 'DX Engineer', handle: '@priya', profile: 'https://github.com/priya' },
         { name: 'Priya Verma', role: 'DX Engineer', handle: '@priya', profile: 'https://github.com/priya' },
         { name: 'Samir Khan', role: 'Data Viz', handle: '@samirk', profile: 'https://github.com/samirk' },
     ],
     projects: [
         {
             title: 'CLI UX Overhaul',
-            description: 'Redesign the command experience with better progress, tracing, and composable subcommands.',
-            tech: ['TypeScript', 'Node.js', 'CLI'],
-            difficulty: 'intermediate',
-            ideaLink: 'https://example.org/projects/cli-ux',
+            description: 'A modern overhaul of our CLI to make complex tasks intuitive and traceable. The goal is to reduce friction for contributors and power users with clearer messaging, step-aware progress, and composable subcommands.',
+            tech: ['TypeScript', 'Node.js', 'CLI', 'Jest'],
+            problemStatement: 'Our current CLI provides minimal feedback and lacks a robust subcommand architecture. As workflows scale, users cannot easily see what is happening, retry failed steps, or compose commands safely. This results in confusion, longer onboarding, and lower contributor confidence.',
+            focusArea: 'Developer Experience • Command Design • Tracing • Error Handling',
+            contributionGuide: 'Start by auditing existing commands and grouping related functionality into subcommands. Propose a progress reporting pattern using spinners/bars and structured logs, then add tracing hooks (timestamps, step IDs). Implement retries and helpful error messages. Add unit/integration tests for the new composition layer and update the README with examples.',
+            githubLink: 'https://github.com/example/example-repo'
         },
         {
             title: 'Accessibility Audit Dashboard',
-            description: 'Ship a dashboard that tracks accessibility regressions across releases.',
-            tech: ['React', 'Tailwind', 'a11y'],
-            difficulty: 'advanced',
+            description: 'A polished audit dashboard that surfaces accessibility findings across builds, product areas, and time. It empowers teams to catch regressions early and prioritize fixes that matter most.',
+            tech: ['React', 'Tailwind', 'a11y', 'Playwright', 'Vitest'],
+            problemStatement: 'Multiple teams ship changes without unified visibility into accessibility health. Findings are scattered across tools and CI logs, making it difficult to track regressions, identify ownership, and measure improvements over time. This leads to inconsistent standards and user-impacting issues.',
+            focusArea: 'Accessibility • Reporting • CI Integration • Trend Analysis',
+            contributionGuide: 'Integrate automated scanners (axe, pa11y) into CI, normalize results, and store them in a lightweight data layer. Build views for trends, severity, and ownership, with filters for releases and components. Add export/share features and a “how to fix” playbook. Write tests for parsers and core UI states, and ship clear docs for integrating new apps.',
+            githubLink: 'https://github.com/example/example-repo'
         },
         {
             title: 'Data Viz Templates',
-            description: 'Create reusable chart presets with strong defaults and storytelling patterns.',
-            tech: ['D3', 'TypeScript', 'Storybook'],
-            difficulty: 'beginner',
+            description: 'A collection of well-crafted, accessible chart templates with strong defaults that make data storytelling effortless. Focused on practical patterns and maintainable APIs.',
+            tech: ['D3', 'TypeScript', 'Storybook', 'Testing Library'],
+            problemStatement: 'Teams repeatedly reinvent chart components, often missing accessibility and consistency. Without opinionated templates and examples, new contributors struggle to create reliable visuals that communicate clearly.',
+            focusArea: 'Data Visualization • Component Libraries • Accessibility',
+            contributionGuide: 'Define a small template API (line, bar, pie) with sensible defaults, keyboard navigation, and color contrast. Add documentation and Storybook demos showcasing real-world data. Include tests for rendering and accessibility. Encourage contributions via a template RFC and starter examples.',
+            githubLink: 'https://github.com/example/example-repo'
         },
     ],
 }
@@ -123,40 +137,64 @@ const MentorCard = ({ mentor }: { mentor: Mentor }) => (
 )
 
 const ProjectCard = ({ project }: { project: Project }) => (
-    <div className="space-y-2 rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
-        <div className="flex items-center justify-between gap-3">
-            <p className="text-sm font-semibold text-white">{project.title}</p>
-            <span className="text-[11px] uppercase tracking-[0.12em] text-white/60">{project.difficulty}</span>
+    <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/5 via-white/10 to-transparent px-6 py-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm">
+        <div className="flex items-start justify-between gap-4">
+            <div className="space-y-2">
+                <p className="text-lg font-semibold text-white">{project.title}</p>
+                <p className="text-sm text-white/75">{project.description}</p>
+            </div>
         </div>
-        <p className="text-sm text-white/70">{project.description}</p>
-        {project.tech.length ? (
-            <div className="flex flex-wrap gap-2">
+
+        {project.tech?.length ? (
+            <div className="mt-3 flex flex-wrap gap-2">
                 {project.tech.map((stack) => (
-                    <Badge key={stack} text={stack} />
+                    <span key={stack} className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/85 ring-1 ring-white/15">
+                        {stack}
+                    </span>
                 ))}
             </div>
         ) : null}
-        {project.ideaLink ? (
-            <Link href={project.ideaLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-brand hover:text-brand/80">
-                Project brief
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.6" stroke="currentColor" className="h-4 w-4">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75h-3a.75.75 0 0 0 0 1.5h1.19l-6.72 6.72a.75.75 0 1 0 1.06 1.06l6.72-6.72v1.19a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-.75-.75z" />
-                </svg>
-            </Link>
-        ) : null}
-    </div>
-)
 
-const ContactItem = ({ contact }: { contact: Contact }) => (
-    <div className="space-y-1 rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-        <p className="text-xs uppercase tracking-[0.14em] text-white/50">{contact.label}</p>
-        {contact.href ? (
-            <Link href={contact.href} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand hover:text-brand/80">
-                {contact.value}
-            </Link>
-        ) : (
-            <p className="text-sm text-white/80">{contact.value}</p>
-        )}
+        <div className="mt-4 space-y-4">
+            {project.problemStatement ? (
+                <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-white/70">
+                        <HiOutlineLightBulb className="h-4 w-4" />
+                        <p className="text-xs uppercase tracking-[0.14em]">Problem Statement</p>
+                    </div>
+                    <p className="text-sm text-white/85 leading-relaxed">{project.problemStatement}</p>
+                </div>
+            ) : null}
+
+            {project.focusArea ? (
+                <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-white/70">
+                        <MdCenterFocusStrong className="h-4 w-4" />
+                        <p className="text-xs uppercase tracking-[0.14em]">Focus Area</p>
+                    </div>
+                    <p className="text-sm text-white/85 leading-relaxed">{project.focusArea}</p>
+                </div>
+            ) : null}
+
+            {project.contributionGuide ? (
+                <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-white/70">
+                        <IoBookOutline className="h-4 w-4" />
+                        <p className="text-xs uppercase tracking-[0.14em]">Student Contribution Guide</p>
+                    </div>
+                    <p className="text-sm text-white/85 leading-relaxed">{project.contributionGuide}</p>
+                </div>
+            ) : null}
+        </div>
+
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+            {project.githubLink ? (
+                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:border-brand/60 hover:bg-brand/20">
+                    <FaGithub className="h-4 w-4" />
+                    GitHub Repository
+                </Link>
+            ) : null}
+        </div>
     </div>
 )
 
@@ -237,7 +275,7 @@ const OrgShowcase = () => {
                             <div className="flex items-center justify-center text-2xl font-kleemax mb-6">
                                 <h2 className="text-white">PROJECTS <span className='text-brand'>/</span> PROBLEM STATEMENTS</h2> 
                             </div>
-                            <div className="grid gap-4 lg:grid-cols-1">
+                            <div className="grid gap-5 lg:grid-cols-1">
                                 {org.projects.map((project) => (
                                     <ProjectCard key={project.title} project={project} />
                                 ))}
@@ -246,20 +284,20 @@ const OrgShowcase = () => {
                     </div>
                 </div>
 
-                <div className="rounded-3xl border border-white/10 bg-gradient-to-r from-brand/20 via-white/5 to-brand/10 px-24 py-10 text-white shadow-[0_22px_70px_-50px_rgba(0,0,0,0.7)]">
+                <div className="rounded-3xl relative bg-gradient-to-r from-brand/20 via-white/5 to-brand/10 px-24 py-10 text-white shadow-[0_22px_70px_-50px_rgba(0,0,0,0.7)]">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                         <div className="space-y-2">
-                            <h2 className="text-2xl font-semibold">Ready to collaborate?</h2>
-                            <p className="max-w-2xl text-sm text-white/70">
+                            <h2 className="text-4xl font-semibold font-chakra">Ready to collaborate?</h2>
+                            <p className="max-w-2xl text-base text-white/70 font-chakra">
                                 Join the community chat, review the issue tracker, and pick a project to start contributing. Mentors are available to help you scope your first patch.
                             </p>
                         </div>
-                        <div className="flex flex-wrap gap-3">
-                            <Link href={org.chat} target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand px-5 py-3 text-sm font-semibold text-black shadow-[0_18px_40px_-26px_rgba(0,0,0,0.8)] transition hover:brightness-110">
-                                Join the chat
+                        <div className="flex flex-wrap gap-3 absolute right-5 bottom-0 px-4 py-2 rounded-t-xl bg-black">
+                            <Link href={org.chat} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 bg-white/5 p-3 text-lg flex justify-center items-center font-semibold text-white transition hover:border-brand/70 hover:text-brand">
+                                <IoChatbox />
                             </Link>
-                            <Link href={org.repo} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:border-brand/70 hover:text-brand">
-                                View repository
+                            <Link href={org.repo} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 bg-white/5 p-3 text-lg flex justify-center items-center font-semibold text-white transition hover:border-brand/70 hover:text-brand">
+                                <FaGithub />
                             </Link>
                         </div>
                     </div>

@@ -122,13 +122,13 @@ const Navbar = () => {
                 {!isOpen && (
                     <button
                         onClick={toggleMenu}
-                        className="sm:hidden z-[2100] w-[44px] h-[44px] flex flex-col justify-center items-center gap-[7px] cursor-pointer group rounded-lg hover:bg-neon/10 transition-all duration-300 absolute top-1/2 -translate-y-1/2 right-5"
+                        className="sm:hidden z-[2100] w-[44px] h-[44px] flex flex-col justify-center items-center gap-[7px] cursor-pointer group rounded-lg hover:bg-brand/10 transition-all duration-300 absolute top-1/2 -translate-y-1/2 right-5"
                         aria-label="Open menu"
                         aria-expanded={isOpen}
                     >
-                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
-                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
-                        <span className="hamburger-line block w-[26px] h-[3px] bg-neon rounded-full group-hover:drop-shadow-neon transition-all duration-300" />
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-brand rounded-full group-hover:drop-shadow-brand transition-all duration-300" />
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-brand rounded-full group-hover:drop-shadow-brand transition-all duration-300" />
+                        <span className="hamburger-line block w-[26px] h-[3px] bg-brand rounded-full group-hover:drop-shadow-brand transition-all duration-300" />
                     </button>
                 )}
 
@@ -177,11 +177,11 @@ const Navbar = () => {
                         {/* Close Button (X) - Top Right */}
                         <button
                             onClick={closeMenu}
-                            className="absolute top-5 right-5 z-[10000] w-[44px] h-[44px] flex items-center justify-center cursor-pointer rounded-full border-2 border-neon/50 hover:border-neon hover:bg-neon/10 transition-all duration-300 group close-button-glow"
+                            className="absolute top-5 right-5 z-[10000] w-[44px] h-[44px] flex items-center justify-center cursor-pointer rounded-full border-2 border-brand/50 hover:border-brand hover:bg-brand/10 transition-all duration-300 group close-button-glow"
                             aria-label="Close menu"
                         >
                             <svg
-                                className="w-6 h-6 text-neon group-hover:drop-shadow-neon transition-all duration-300"
+                                className="w-6 h-6 text-brand group-hover:drop-shadow-brand transition-all duration-300"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
