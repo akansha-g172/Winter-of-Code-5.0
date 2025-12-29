@@ -8,14 +8,17 @@ import { FaGithub } from "react-icons/fa";
 import { HiOutlineLightBulb } from "react-icons/hi";
 import { MdCenterFocusStrong } from "react-icons/md";
 import asset1 from '../public/org.svg'
-import partnercard from '../public/partner.svg'
 import projectbanner from "../public/projectbanner.svg";
+import { MdEmail } from "react-icons/md";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { FaDiscord } from "react-icons/fa6";
 
 type Mentor = {
     name: string
-    role: string
-    handle?: string
-    profile?: string
+    desc: string
+    discord?: string
+    email?: string
+    linkedin?: string
 }
 
 type Project = {
@@ -74,11 +77,11 @@ const org: Org = {
         { label: 'GitHub', value: 'github.com/example', href: 'https://github.com/example' },
     ],
     mentors: [
-        { name: 'Alex Rivera', role: 'Lead Maintainer', handle: '@alex-r', profile: 'https://github.com/alex-r' },
-        { name: 'Alex Rivera', role: 'Lead Maintainer', handle: '@alex-r', profile: 'https://github.com/alex-r' },
-        { name: 'Priya Verma', role: 'DX Engineer', handle: '@priya', profile: 'https://github.com/priya' },
-        { name: 'Priya Verma', role: 'DX Engineer', handle: '@priya', profile: 'https://github.com/priya' },
-        { name: 'Samir Khan', role: 'Data Viz', handle: '@samirk', profile: 'https://github.com/samirk' },
+        { name: 'Alex Rivera', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, harum et optio obcaecati reprehenderit aperiam soluta facere veniam numquam voluptatibus laudantium a sequi ducimus, consequuntur vero dolorum, odit labore ad.', discord: '@alex-r', email: 'abc@gmail.com', linkedin: 'linkedin.com' },
+        { name: 'Alex Rivera', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, harum et optio obcaecati reprehenderit aperiam soluta facere veniam numquam voluptatibus laudantium a sequi ducimus, consequuntur vero dolorum, odit labore ad.', discord: '@alex-r', email: 'abc@gmail.com', linkedin: 'linkedin.com' },
+        { name: 'Priya Verma', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, harum et optio obcaecati reprehenderit aperiam soluta facere veniam numquam voluptatibus laudantium a sequi ducimus, consequuntur vero dolorum, odit labore ad.', discord: '@alex-r', email: 'abc@gmail.com', linkedin: 'linkedin.com' },
+        { name: 'Priya Verma', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, harum et optio obcaecati reprehenderit aperiam soluta facere veniam numquam voluptatibus laudantium a sequi ducimus, consequuntur vero dolorum, odit labore ad.', discord: '@alex-r', email: 'abc@gmail.com', linkedin: 'linkedin.com' },
+        { name: 'Samir Khan', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, harum et optio obcaecati reprehenderit aperiam soluta facere veniam numquam voluptatibus laudantium a sequi ducimus, consequuntur vero dolorum, odit labore ad.', discord: '@alex-r', email: 'abc@gmail.com', linkedin: 'linkedin.com' },
     ],
     projects: [
         {
@@ -126,27 +129,34 @@ const MentorCard = ({ mentor }: { mentor: Mentor }) => (
     <div className="flex relative items-center justify-between rounded-2xl bg-white/5 px-4 py-3 min-h-60">
         <div>
             <p className="text-lg font-chakra font-semibold text-white absolute top-0 left-8 rounded-b-xl bg-black px-4 py-2">{mentor.name}</p>
-            <p className="text-xs text-white/60">{mentor.role}</p>
+            <p className="text-sm px-6 text-white/60">{mentor.desc}</p>
         </div>
-        {mentor.profile ? (
-            <Link href={mentor.profile} target="_blank" rel="noopener noreferrer" className="text-base font-semibold text-brand hover:text-brand/80 absolute bottom-0 right-0 px-4 py-2 bg-black rounded-tl-xl">
-                {mentor.handle || 'Profile'}
-            </Link>
-        ) : null}
+        <div className='flex gap-2 absolute bottom-0 right-0 px-4 py-2 bg-black rounded-tl-xl'>
+            {mentor.email ? (
+              <Link href={"mailto:"+mentor.email} target="_blank" rel="noopener noreferrer" className="text-lg rounded-3xl font-semibold text-brand hover:text-brand/80 bg-white/5 p-2">
+                <MdEmail />
+              </Link>
+            ) : null}
+            {mentor.linkedin ? (
+              <Link href={mentor.linkedin} target="_blank" rel="noopener noreferrer" className="text-lg rounded-3xl font-semibold text-brand hover:text-brand/80 bg-white/5 p-2">
+                <IoLogoLinkedin />
+              </Link>
+            ) : null}
+        </div>
     </div>
 )
 
 const ProjectCard = ({ project }: { project: Project }) => (
-    <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/5 via-white/10 to-transparent px-6 py-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm">
+    <div className="group relative overflow-hidden h-fit rounded-3xl bg-gradient-to-r from-brand/10 to-white/5 px-16 pt-4 pb-10 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.6)] backdrop-blur-sm font-chakra">
         <div className="flex items-start justify-between gap-4">
-            <div className="space-y-2">
-                <p className="text-lg font-semibold text-white">{project.title}</p>
-                <p className="text-sm text-white/75">{project.description}</p>
+            <div className="">
+                <p className="text-2xl font-semibold text-white absolute top-0 left-14 px-4 py-2 bg-black rounded-b-xl">{project.title}</p>
+                <p className="text-base text-white/75 mt-14">{project.description}</p>
             </div>
         </div>
 
         {project.tech?.length ? (
-            <div className="mt-3 flex flex-wrap gap-2">
+            <div className="mt-4 mb-8 flex flex-wrap gap-2">
                 {project.tech.map((stack) => (
                     <span key={stack} className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/85 ring-1 ring-white/15">
                         {stack}
@@ -158,40 +168,39 @@ const ProjectCard = ({ project }: { project: Project }) => (
         <div className="mt-4 space-y-4">
             {project.problemStatement ? (
                 <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-white/70">
+                    <div className="flex items-center gap-2 text-brand">
                         <HiOutlineLightBulb className="h-4 w-4" />
-                        <p className="text-xs uppercase tracking-[0.14em]">Problem Statement</p>
+                        <p className="text-base uppercase tracking-[0.14em]">Problem Statement</p>
                     </div>
-                    <p className="text-sm text-white/85 leading-relaxed">{project.problemStatement}</p>
+                    <p className="text-base text-white/85 leading-relaxed">{project.problemStatement}</p>
                 </div>
             ) : null}
 
             {project.focusArea ? (
                 <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-white/70">
+                    <div className="flex items-center gap-2 text-brand">
                         <MdCenterFocusStrong className="h-4 w-4" />
-                        <p className="text-xs uppercase tracking-[0.14em]">Focus Area</p>
+                        <p className="text-base uppercase tracking-[0.14em]">Focus Area</p>
                     </div>
-                    <p className="text-sm text-white/85 leading-relaxed">{project.focusArea}</p>
+                    <p className="text-base text-white/85 leading-relaxed">{project.focusArea}</p>
                 </div>
             ) : null}
 
             {project.contributionGuide ? (
                 <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-white/70">
+                    <div className="flex items-center gap-2 text-brand">
                         <IoBookOutline className="h-4 w-4" />
-                        <p className="text-xs uppercase tracking-[0.14em]">Student Contribution Guide</p>
+                        <p className="text-base uppercase tracking-[0.14em]">Student Contribution Guide</p>
                     </div>
-                    <p className="text-sm text-white/85 leading-relaxed">{project.contributionGuide}</p>
+                    <p className="text-base text-white/85 leading-relaxed">{project.contributionGuide}</p>
                 </div>
             ) : null}
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center gap-3">
+        <div className="mt-10 flex flex-wrap items-center justify-end gap-3">
             {project.githubLink ? (
-                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold text-white transition hover:border-brand/60 hover:bg-brand/20">
-                    <FaGithub className="h-4 w-4" />
-                    GitHub Repository
+                <Link href={project.githubLink} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/20 bg-white/5 p-3 text-3xl flex justify-center items-center font-semibold text-white transition hover:border-brand/70 hover:text-brand">
+                    <FaGithub />
                 </Link>
             ) : null}
         </div>
@@ -262,7 +271,7 @@ const OrgShowcase = () => {
                     <div className="space-y-6">
                         <div className="space-y-3 pt-16">
                             <div className="flex items-center justify-center text-2xl font-kleemax mb-6">
-                                <h2 className="text-white">MENTORS</h2>
+                                <h2 className="text-brand">MENTORS</h2>
                             </div>
                             <div className="grid gap-3 md:grid-cols-3">
                                 {org.mentors.map((mentor) => (
@@ -273,9 +282,9 @@ const OrgShowcase = () => {
 
                         <div className="space-y-3 pt-16 pb-8">
                             <div className="flex items-center justify-center text-2xl font-kleemax mb-6">
-                                <h2 className="text-white">PROJECTS <span className='text-brand'>/</span> PROBLEM STATEMENTS</h2> 
+                                <h2 className="text-brand">PROJECTS</h2> 
                             </div>
-                            <div className="grid gap-5 lg:grid-cols-1">
+                            <div className="grid gap-10 lg:grid-cols-1">
                                 {org.projects.map((project) => (
                                     <ProjectCard key={project.title} project={project} />
                                 ))}
@@ -284,7 +293,7 @@ const OrgShowcase = () => {
                     </div>
                 </div>
 
-                <div className="rounded-3xl relative bg-gradient-to-r from-brand/20 via-white/5 to-brand/10 px-24 py-10 text-white shadow-[0_22px_70px_-50px_rgba(0,0,0,0.7)]">
+                <div className="rounded-3xl relative bg-gradient-to-r from-brand/20 via-white/5 to-brand/10 mx-8 px-24 py-10 text-white shadow-[0_22px_70px_-50px_rgba(0,0,0,0.7)]">
                     <div className="flex flex-wrap items-center justify-between gap-4">
                         <div className="space-y-2">
                             <h2 className="text-4xl font-semibold font-chakra">Ready to collaborate?</h2>
