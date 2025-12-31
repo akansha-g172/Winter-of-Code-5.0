@@ -16,8 +16,16 @@
         "website": "/orgsPage/mixxx"
     },
     {
+        "name": "Kornia",
+        "website": "/orgsPage/Kornia"
+    },
+    {
         "name": "Open World Holidays Framework",
         "website": "/orgsPage/vacanza"
+    },
+    {
+        "name": "Keploy",
+        "website": "/orgsPage/keploy"
     },
     {
         "name": "OpsTree Global",
@@ -26,10 +34,6 @@
     {
         "name": "PerformanC",
         "website": "/orgsPage/performanc"
-    },
-    {
-        "name": "Keploy",
-        "website": "/orgsPage/keploy"
     },
     {
         "name": "Development Society AEC",
