@@ -106,7 +106,7 @@ export const orgs: Record<string, Org> = {
     ],
     projects: [
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "LIBCUPSFILTERS",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -119,7 +119,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/libcupsfilters",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "CUPS-FILTERS",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -132,7 +132,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/cups-filters",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "CPDB-LIBS",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -145,7 +145,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/cpdb-libs",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "CPDB-BACKEND-CUPS",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -158,7 +158,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/cpdb-backend-cups",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "CUPS-SNAP",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -171,7 +171,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/cups-snap",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "LIBPPD",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -184,7 +184,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/libppd",
       },
       {
-        title: "Complete CI testing for OpenPrinting project",
+        title: "PAPPL-RETROFIT",
         description:
           "",
         tech: ["C", "Shell", "GIT", "Github actions/workflows", "Static analysers and similar tools"],
@@ -197,7 +197,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/pappl-retrofit",
       },
       {
-        title: "Adding Fuzzing Support to go-avahi in OpenPrinting",
+        title: "GO-AVAHI",
         description:
           "",
         tech: ["Go", "Fuzz testing", "Security"],
@@ -210,7 +210,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/go-avahi",
       },
       {
-        title: "Adding Fuzzing Support to go-avahi in OpenPrinting",
+        title: "FUZZING",
         description:
           "",
         tech: ["Go", "Fuzz testing", "Security"],
@@ -223,7 +223,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/fuzzing",
       },
       {
-        title: "Implementing WS-Scan support to go-mfp in OpenPrinting",
+        title: "GO-MFP",
         description:
           "",
         tech: ["Go"],
@@ -235,7 +235,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/go-mfp",
       },
       {
-        title: "Implementing WS-Scan support to go-mfp in OpenPrinting",
+        title: "GO-MFP ESCL",
         description:
           "",
         tech: ["Go"],
@@ -247,7 +247,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/go-mfp/tree/master/proto/escl",
       },
       {
-        title: "Adding the legacy IEEE-1284 printers support to go-mft in OpenPrinting",
+        title: "GO-MFP IEEE",
         description:
           "",
         tech: ["Go", "Fluent reading of C is required, because CUPS sources is important source of information"],
@@ -259,7 +259,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/go-mfp",
       },
       {
-        title: "Adding the legacy IEEE-1284 printers support to go-mft in OpenPrinting",
+        title: "GO-MFP ESCL IEEE",
         description:
           "",
         tech: ["Go", "Fluent reading of C is required, because CUPS sources is important source of information"],
@@ -271,7 +271,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/OpenPrinting/go-mfp/tree/master/proto/ieee1284",
       },
       {
-        title: "Implementing Form XObject Rendering in libpdfrip for OpenPrinting",
+        title: "PDFIO",
         description:
           "",
         tech: ["C", "shell scripting", "Understanding of PDF file structure"],
@@ -283,7 +283,7 @@ export const orgs: Record<string, Org> = {
         githubLink: "https://github.com/michaelrsweet/pdfio",
       },
       {
-        title: "Implementing Form XObject Rendering in libpdfrip for OpenPrinting",
+        title: "LIBPDFRIP",
         description:
           "",
         tech: ["C", "shell scripting", "Understanding of PDF file structure"],
@@ -414,7 +414,7 @@ export const orgs: Record<string, Org> = {
     tagline: "",
     description:
       "QC-Devs develops free, open-source, and cross-platform libraries for the computational sciences, focusing on theoretical and computational chemistry. Our goal is to make programming accessible to students and researchers, to catalyze scientific collaborations, and to promote precepts of sustainable software development. We’re adapting some of the same principles to develop free and open-source educational materials (qc-edu.org) to modernize scientific education by integrating hands-on computation and computer programming.",
-    heroImage: "/past-orgs/OpenPrinting.webp",
+    heroImage: "/orgs/QC Devs.png",
     website: "https://qcdevs.org",
     chat: "",
     repo: "https://github.com/theochem",
