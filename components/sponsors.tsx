@@ -8,9 +8,10 @@ const SponsorData: string[][] = [
     [], // Bronze
     ["xyz"], // Domain Partner
     ["StockEdge"], // Knowledge Partner
+    ["OSEN"], // Career Partner
 ];
 
-const tier = ["Platinum", "Diamond", "Gold", "Silver", "Bronze", "Domain Partner", "Knowledge Partner"];
+const tier = ["Platinum", "Diamond", "Gold", "Silver", "Bronze", "Domain Partner", "Knowledge Partner", "Career Partner"];
 
 const Sponsors = () => {
     const TBA = false; // change to true if sponsors not announced
@@ -58,7 +59,7 @@ const Sponsors = () => {
                                     {tierData.map((sponsor, idx) => (
                                         <Image
                                             key={idx}
-                                            className={`backdrop-blur h-auto hover:scale-105 duration-700 ${sponsor.toLowerCase() === 'fueler' ? 'sm:w-[30%] w-[50%]' : 'sm:w-[20%] w-[30%]'}`}
+                                            className={`backdrop-blur h-auto hover:scale-105 duration-700 ${sponsor.toLowerCase() === 'fueler' || sponsor.toLowerCase() === 'osen' ? 'sm:w-[30%] w-[50%]' : 'sm:w-[20%] w-[30%]'}`}
                                             src={`/sponsors/${sponsorFileMap[sponsor.toLowerCase()] ?? `${sponsor.toLowerCase()}.png`}`}
                                             width={600}
                                             height={200}
