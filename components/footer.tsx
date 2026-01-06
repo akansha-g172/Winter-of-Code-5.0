@@ -26,6 +26,8 @@ const Footer = () => {
         window.open(url + terminal.value.toUpperCase(), '_blank');
     }
 
+    const currentYear = new Date().getFullYear();
+
     return (
         <div className="flex pb-[1%] px-[5%] w-full justify-between"
             style={{ backgroundImage: `url(${footer.src})`, backgroundSize: "cover" }}>
@@ -64,14 +66,14 @@ const Footer = () => {
                 </div>
 
                 {resources.map((resource, index) => (
-                    <Link href={resource.link} target="_blank" key={index}
+                    <Link href={resource.link} key={index}
                         className="text-scale-30-5 text-white font-chakra w-[90%] m-[1%] hover:scale-110 duration-700">
                         {resource.title}
                     </Link>
                 ))}
 
                 <div className="text-scale-40-6 text-white font-chakra text-wrap w-[90%] m-[1%]">
-                    © GDG IIIT KALYANI 2025
+                    © GDG IIIT KALYANI {currentYear}
                 </div>
             </div>
 
